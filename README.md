@@ -42,7 +42,7 @@ La comparación MATLAB/Python comprueba la reproducción del mismo modelo. No de
 
 Los datos originales XLSX y los PDF no están incluidos. La auditoría específica que los necesita se informa como no evaluada cuando faltan; las pruebas de dinámica y paridad siguen activas. `python/references/` contiene fixtures numéricos necesarios para reproducir pruebas y escenarios, no los libros ni las tablas originales.
 
-Consulta [fuentes y datos](python/docs/DATOS_Y_FUENTES.md), [limitaciones](python/docs/LIMITACIONES.md), [validación](python/docs/VALIDACION.md) y [contenido publicado](PUBLICAR_EN_GITHUB.md).
+Consulta [fuentes y datos](python/docs/DATOS_Y_FUENTES.md), [limitaciones](python/docs/LIMITACIONES.md) y [validación](python/docs/VALIDACION.md).
 
 ## Derechos y contribuciones
 

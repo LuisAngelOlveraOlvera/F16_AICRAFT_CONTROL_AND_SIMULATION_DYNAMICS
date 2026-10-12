@@ -9,11 +9,17 @@ Las referencias compactadas mantienen los valores numéricos y eliminan
 metadatos de rutas personales y observaciones redundantes. Sus hashes de origen
 y de paquete están registrados en references/manifest_referencias.json (Python).
 
-## Validación de estas copias
-Los resultados actuales se registrarán en docs/RESULTADO_VERIFICACION.md.
+## Validación local
+MATLAB R2024a/Windows: nueve pruebas del núcleo, 21 regresiones y pruebas
+de trim, equivalencia 6 DOF, simulador, waypoints, paso, exportación y
+visualización aprobadas el 12 de octubre de 2026.
+Python 3.12/Windows: 24 pruebas, 23 aprobadas y una omitida por la ausencia
+del XLSX original. Ninguna prueba de física, control o paridad se omitió.
 En Python la prueba de tablas locales se omite si no se proporcionan esos datos.
 La omisión no es una validación de las tablas y se informa expresamente.
-No se verifica GitHub Actions en la nube antes de existir un remoto.
+La validación de GitHub Actions se consulta por commit en:
+https://github.com/LuisAngelOlveraOlvera/F16_AICRAFT_CONTROL_AND_SIMULATION_DYNAMICS/actions
+Las pruebas no certifican fidelidad al avión real.
 
 ## Repetir
 MATLAB: verificar_publicacion

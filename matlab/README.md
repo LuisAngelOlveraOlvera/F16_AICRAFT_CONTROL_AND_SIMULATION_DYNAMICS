@@ -1,7 +1,7 @@
 # F-16 académico: ejecución común MATLAB y Python
 
 **Versión académica, 0.1.0-dev.** Implementaciones MATLAB/Python en un repositorio
-público compartido bajo [licencia MIT](LICENSE). Ver [qué cargar y qué excluir](PUBLICAR_EN_GITHUB.md)
+público compartido bajo [licencia MIT](LICENSE). Ver [limitaciones](docs/LIMITACIONES.md)
 y [fuentes y datos locales](docs/DATOS_Y_FUENTES.md). No se incluyen libros,
 PDFs, tablas originales ni resultados de trabajo. Las referencias de prueba
 Python sí se incluyen porque son necesarias para reproducir la validación.

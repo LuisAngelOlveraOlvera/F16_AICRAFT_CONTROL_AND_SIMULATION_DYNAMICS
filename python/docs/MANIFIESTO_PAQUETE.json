@@ -25,8 +25,8 @@
     },
     {
       "archivo": "CHANGELOG.md",
-      "bytes": 572,
-      "sha256": "104250a4acaf7c23d2b8b18db90808606c4a833113dfba7d2caa0e363d077a7b"
+      "bytes": 620,
+      "sha256": "0f34481b5a3613622da99eb2e96b648387e91cd18b46beeea965c4f415d6138f"
     },
     {
       "archivo": "CONTRIBUTING.md",
@@ -34,24 +34,14 @@
       "sha256": "0f0398410dbe3b8b660bc0f61b580bcb4ea9c99e0a878d060d8ba77dad52caa6"
     },
     {
-      "archivo": "LICENCIA_PENDIENTE.md",
-      "bytes": 1096,
-      "sha256": "a61e7497fbbda8989f0d2a7d59cde59dbcc37f5f3c53c17fcb63493496cc190c"
-    },
-    {
       "archivo": "LICENSE",
       "bytes": 1078,
       "sha256": "4b9d84b3ab741cc4fa18a683202f820e3e24e7200354c061360e35acc6f933f4"
     },
     {
-      "archivo": "PUBLICAR_EN_GITHUB.md",
-      "bytes": 1786,
-      "sha256": "e68b1db0d817841e450c69d9e2297e67f43a40b293870f4449a1f2d2a54ef310"
-    },
-    {
       "archivo": "README.md",
-      "bytes": 14126,
-      "sha256": "cef2ffd847afffdcd149bdff0a0d8e18561a9d241d44fa1c48af07293a392430"
+      "bytes": 14111,
+      "sha256": "c10b145051fce77e92ccc4ef052d2431a503e36ef1d8ee10749d1379a495efe9"
     },
     {
       "archivo": "auditar_lateral_lewis.py",
@@ -84,14 +74,9 @@
       "sha256": "5b90dbcc0fa262d2a3934a57180f2f47e029ea335b5d3fd1552a2802a19ed9f9"
     },
     {
-      "archivo": "docs/RESULTADO_VERIFICACION.md",
-      "bytes": 1641,
-      "sha256": "4518ad0c80595b9fb56bf24d6a51c54c1bed67422b8f13ca87804f067c9dd488"
-    },
-    {
       "archivo": "docs/VALIDACION.md",
-      "bytes": 1384,
-      "sha256": "d9d29b25f84e8f5e13718603b7de4e38f74f868d1b67d5482e130d3efcd7cc79"
+      "bytes": 1785,
+      "sha256": "ba21e917871dd2dcb5561e1d1175b75970ea39a3284aca1a12165d993601a63d"
     },
     {
       "archivo": "ejecutar.py",
