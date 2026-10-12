@@ -1,6 +1,6 @@
 {
   "estado": "ENTREGA_PUBLICA_20261012",
-  "licencia": "PENDIENTE",
+  "licencia": "MIT",
   "convencion_hash": "Bytes almacenados en Git; texto CRLF normalizado a LF por gitattributes",
   "archivos": [
     {
@@ -24,34 +24,14 @@
       "sha256": "726c86d9115b382b6d3c5af294e6d85aad0c41b658e2ef8e155d10453c1edb60"
     },
     {
-      "archivo": "act_edo.m",
-      "bytes": 110,
-      "sha256": "881af3e60daf5ab432d839c9cd4b5fcbe92a7e8700eafbacd4a5a223030afb97"
+      "archivo": "CHANGELOG.md",
+      "bytes": 572,
+      "sha256": "104250a4acaf7c23d2b8b18db90808606c4a833113dfba7d2caa0e363d077a7b"
     },
     {
-      "archivo": "animar_f16_academico.m",
-      "bytes": 5643,
-      "sha256": "f889d75bb42365d4155935b1db11cb687721f46cf749b2465057d86573298551"
-    },
-    {
-      "archivo": "asignaU.m",
-      "bytes": 101,
-      "sha256": "7859787a19771879d8419addc852e704c1f7628247ecc812cc85eef5279b9b8f"
-    },
-    {
-      "archivo": "asignaX.m",
-      "bytes": 265,
-      "sha256": "656ccd0a5663c427703e1af1cc64db1663023ddf932207361d8b649c61f69414"
-    },
-    {
-      "archivo": "atmosfera.m",
-      "bytes": 654,
-      "sha256": "1f51f9576ece3d9ab803235c9c9512dcb18c5a035349c7a6681f5587e976e846"
-    },
-    {
-      "archivo": "auditar_lateral_lewis.m",
-      "bytes": 14095,
-      "sha256": "63dec1d8a4ccfada155e9098a6d62750d2ad04e649b4e98f4138770b42c916d9"
+      "archivo": "CONTRIBUTING.md",
+      "bytes": 616,
+      "sha256": "0f0398410dbe3b8b660bc0f61b580bcb4ea9c99e0a878d060d8ba77dad52caa6"
     },
     {
       "archivo": "Calc_Empuje.m",
@@ -59,19 +39,14 @@
       "sha256": "83cb5e9fc56fa4863aff9326e23c34f1a7e8e0fb2bc94cc041256885c3a1f88d"
     },
     {
-      "archivo": "Calc_inv_Tt.m",
-      "bytes": 228,
-      "sha256": "a35f90f2a943d4880efeea1eb31b82ab113b80d09f07e31bb9f252e5d259df8a"
-    },
-    {
       "archivo": "Calc_P1.m",
       "bytes": 234,
       "sha256": "697a06b8ba23818f3487766377cf245dfcfc8dead06e9836c2763f9dcf0e47c1"
     },
     {
-      "archivo": "CHANGELOG.md",
-      "bytes": 572,
-      "sha256": "104250a4acaf7c23d2b8b18db90808606c4a833113dfba7d2caa0e363d077a7b"
+      "archivo": "Calc_inv_Tt.m",
+      "bytes": 228,
+      "sha256": "a35f90f2a943d4880efeea1eb31b82ab113b80d09f07e31bb9f252e5d259df8a"
     },
     {
       "archivo": "Cl.m",
@@ -174,21 +149,6 @@
       "sha256": "0e27a122d762896de95706b691ef5070966bf9625fa1b2f5f3dc0f513c5779f8"
     },
     {
-      "archivo": "comparar_f16_estandarizado.m",
-      "bytes": 13190,
-      "sha256": "1b1216e2dae32270b4154ebedf4ff6c1bfbaf4816bfbf5bac330e8e663beaec5"
-    },
-    {
-      "archivo": "CONTRIBUTING.md",
-      "bytes": 616,
-      "sha256": "0f0398410dbe3b8b660bc0f61b580bcb4ea9c99e0a878d060d8ba77dad52caa6"
-    },
-    {
-      "archivo": "ctrl_PID.m",
-      "bytes": 1032,
-      "sha256": "12c2b5cbfe2756c574de68c815eb727f44e146ddaefc7340443cf464d4c271ec"
-    },
-    {
       "archivo": "Cx.m",
       "bytes": 284,
       "sha256": "37568fcd648bf7098c93960f1a6d350bf755986f1e12936569f332873191bb0c"
@@ -267,6 +227,116 @@
       "archivo": "Czt.m",
       "bytes": 453,
       "sha256": "021d9719cbbc707b06b927e1c680ce5f362c699f7e5b03d7d835da6fd077c588"
+    },
+    {
+      "archivo": "FT.m",
+      "bytes": 634,
+      "sha256": "ed7bdca9bcd4fc3663857abe2fc04b10df4312f3db708dc7ac07b52208227356"
+    },
+    {
+      "archivo": "Funcion_Tidle.m",
+      "bytes": 489,
+      "sha256": "0729e699aa18f916a6f5240cf0060b9894315bb8ce30511f0da43e2ae2fa1c27"
+    },
+    {
+      "archivo": "Funcion_Tmax.m",
+      "bytes": 437,
+      "sha256": "2617dce698fcd8248ee5e9908ef57c9a9ee7058ead0fc6e0e0d6c28fd8067539"
+    },
+    {
+      "archivo": "Funcion_Tmil.m",
+      "bytes": 595,
+      "sha256": "dc630cb3d92c4eeaf5f1b49be60f74530c74fe09d117687781f01b94b381f7a8"
+    },
+    {
+      "archivo": "LICENCIA_PENDIENTE.md",
+      "bytes": 1096,
+      "sha256": "a61e7497fbbda8989f0d2a7d59cde59dbcc37f5f3c53c17fcb63493496cc190c"
+    },
+    {
+      "archivo": "LICENSE",
+      "bytes": 1078,
+      "sha256": "4b9d84b3ab741cc4fa18a683202f820e3e24e7200354c061360e35acc6f933f4"
+    },
+    {
+      "archivo": "Lbar.m",
+      "bytes": 144,
+      "sha256": "7e65e2b618a9308ca2cc9e5dad16dc6e82a95e3964621a3b1f42938941f3007a"
+    },
+    {
+      "archivo": "Mbar.m",
+      "bytes": 167,
+      "sha256": "b8714b4e11bd0b7b859381286aef0c7ca65ce2634c5f2185674983073c1e8d67"
+    },
+    {
+      "archivo": "Nbar.m",
+      "bytes": 186,
+      "sha256": "b372a5224cf08dcacb9bf2bb8d62b6f24575d8a1f10a7368a9db6953c406fb73"
+    },
+    {
+      "archivo": "PUBLICAR_EN_GITHUB.md",
+      "bytes": 1786,
+      "sha256": "e68b1db0d817841e450c69d9e2297e67f43a40b293870f4449a1f2d2a54ef310"
+    },
+    {
+      "archivo": "README.md",
+      "bytes": 14126,
+      "sha256": "cef2ffd847afffdcd149bdff0a0d8e18561a9d241d44fa1c48af07293a392430"
+    },
+    {
+      "archivo": "Xbar.m",
+      "bytes": 143,
+      "sha256": "a892e7dc25db37deec3785684bebc37b319b49630ab600373d5713a1f7053564"
+    },
+    {
+      "archivo": "Ybar.m",
+      "bytes": 141,
+      "sha256": "4ba19ac7eda80de2653511d5242188f7cbdedbf944bd799e2ed50aa52fe8c5ca"
+    },
+    {
+      "archivo": "Zbar.m",
+      "bytes": 138,
+      "sha256": "eba24ff35465493dca2ba42a5bf710292d7271ba9d9c8c444a85dae6d23e813c"
+    },
+    {
+      "archivo": "act_edo.m",
+      "bytes": 110,
+      "sha256": "881af3e60daf5ab432d839c9cd4b5fcbe92a7e8700eafbacd4a5a223030afb97"
+    },
+    {
+      "archivo": "animar_f16_academico.m",
+      "bytes": 5643,
+      "sha256": "f889d75bb42365d4155935b1db11cb687721f46cf749b2465057d86573298551"
+    },
+    {
+      "archivo": "asignaU.m",
+      "bytes": 101,
+      "sha256": "7859787a19771879d8419addc852e704c1f7628247ecc812cc85eef5279b9b8f"
+    },
+    {
+      "archivo": "asignaX.m",
+      "bytes": 265,
+      "sha256": "656ccd0a5663c427703e1af1cc64db1663023ddf932207361d8b649c61f69414"
+    },
+    {
+      "archivo": "atmosfera.m",
+      "bytes": 654,
+      "sha256": "1f51f9576ece3d9ab803235c9c9512dcb18c5a035349c7a6681f5587e976e846"
+    },
+    {
+      "archivo": "auditar_lateral_lewis.m",
+      "bytes": 14095,
+      "sha256": "63dec1d8a4ccfada155e9098a6d62750d2ad04e649b4e98f4138770b42c916d9"
+    },
+    {
+      "archivo": "comparar_f16_estandarizado.m",
+      "bytes": 13190,
+      "sha256": "1b1216e2dae32270b4154ebedf4ff6c1bfbaf4816bfbf5bac330e8e663beaec5"
+    },
+    {
+      "archivo": "ctrl_PID.m",
+      "bytes": 1032,
+      "sha256": "12c2b5cbfe2756c574de68c815eb727f44e146ddaefc7340443cf464d4c271ec"
     },
     {
       "archivo": "dClB.m",
@@ -415,8 +485,8 @@
     },
     {
       "archivo": "docs/DATOS_Y_FUENTES.md",
-      "bytes": 1558,
-      "sha256": "cd32160894f87acf165648032e1d249d75fecef0ec04e531207c9c4bebf2d75e"
+      "bytes": 1555,
+      "sha256": "8a29b48f38b05ca0186abe84cfefce304757ae1fb02c397fb2ab619bab15574d"
     },
     {
       "archivo": "docs/LIMITACIONES.md",
@@ -425,8 +495,8 @@
     },
     {
       "archivo": "docs/RESULTADO_VERIFICACION.md",
-      "bytes": 1545,
-      "sha256": "b8da199832679b7ad8a11d64182cb9a9f745765f687b3ddc06b6ea982c0871ab"
+      "bytes": 1641,
+      "sha256": "4518ad0c80595b9fb56bf24d6a51c54c1bed67422b8f13ca87804f067c9dd488"
     },
     {
       "archivo": "docs/VALIDACION.md",
@@ -467,26 +537,6 @@
       "archivo": "fm.m",
       "bytes": 495,
       "sha256": "a4db0ee62eb51cd75d079ba838bc9170d92b2bac7183082f00662aa3a0bf4dd2"
-    },
-    {
-      "archivo": "FT.m",
-      "bytes": 634,
-      "sha256": "ed7bdca9bcd4fc3663857abe2fc04b10df4312f3db708dc7ac07b52208227356"
-    },
-    {
-      "archivo": "Funcion_Tidle.m",
-      "bytes": 489,
-      "sha256": "0729e699aa18f916a6f5240cf0060b9894315bb8ce30511f0da43e2ae2fa1c27"
-    },
-    {
-      "archivo": "Funcion_Tmax.m",
-      "bytes": 437,
-      "sha256": "2617dce698fcd8248ee5e9908ef57c9a9ee7058ead0fc6e0e0d6c28fd8067539"
-    },
-    {
-      "archivo": "Funcion_Tmil.m",
-      "bytes": 595,
-      "sha256": "dc630cb3d92c4eeaf5f1b49be60f74530c74fe09d117687781f01b94b381f7a8"
     },
     {
       "archivo": "funciones.m",
@@ -544,16 +594,6 @@
       "sha256": "cd69271a7b71badbba7f86d1b12caf9cc4982b2845a0143f28a94c6adf65180a"
     },
     {
-      "archivo": "Lbar.m",
-      "bytes": 144,
-      "sha256": "7e65e2b618a9308ca2cc9e5dad16dc6e82a95e3964621a3b1f42938941f3007a"
-    },
-    {
-      "archivo": "LICENCIA_PENDIENTE.md",
-      "bytes": 841,
-      "sha256": "3615775407642a999b8e2e8a77ad5ccdaee827f54945b764d0aa49cdf0218d4b"
-    },
-    {
       "archivo": "linmod_fd.m",
       "bytes": 750,
       "sha256": "df1a618bbefd3a313851430cba41ef4d9b4311cb366301c196109bc4cdbe88c0"
@@ -569,11 +609,6 @@
       "sha256": "ebea8ef824d53ea65bc61d2ef36abe11bb507990199c4cd19ed178acf86f0c8f"
     },
     {
-      "archivo": "Mbar.m",
-      "bytes": 167,
-      "sha256": "b8714b4e11bd0b7b859381286aef0c7ca65ce2634c5f2185674983073c1e8d67"
-    },
-    {
       "archivo": "modelo_cuerpo.m",
       "bytes": 2524,
       "sha256": "0cd5234dad1b9b33c579263af52887e72fa3151155b8b851849466a921ce2b3e"
@@ -582,11 +617,6 @@
       "archivo": "modelo_ss.m",
       "bytes": 4419,
       "sha256": "c395fa9e44cc84242f8beb1ad397045b79ee68abd02d9a7644c2afdd4335be24"
-    },
-    {
-      "archivo": "Nbar.m",
-      "bytes": 186,
-      "sha256": "b372a5224cf08dcacb9bf2bb8d62b6f24575d8a1f10a7368a9db6953c406fb73"
     },
     {
       "archivo": "parametros.m",
@@ -694,16 +724,6 @@
       "sha256": "2f56afb7247a7ac22c2c609b84c5cb99263c819703fb998b2f9ba00a0ecfcfec"
     },
     {
-      "archivo": "PUBLICAR_EN_GITHUB.md",
-      "bytes": 1694,
-      "sha256": "6db6860b0e448e36f23edd6e5f0f14fccfd748529682d5704b571174de7b6a6d"
-    },
-    {
-      "archivo": "README.md",
-      "bytes": 14135,
-      "sha256": "a9728969403411863907a316c957804fbb3cdbc237ea719c34a86ec57c5ebecc"
-    },
-    {
       "archivo": "ref_alfa.m",
       "bytes": 562,
       "sha256": "8224ea1a5f68ed94fc521919b034f4f761189fd36e85fff8bd73b518da0c5af3"
@@ -767,21 +787,6 @@
       "archivo": "verificar_simetria.m",
       "bytes": 2976,
       "sha256": "1a5349bc815a18f0a594756533c329fc5391c027d4453702f93981c0645bd856"
-    },
-    {
-      "archivo": "Xbar.m",
-      "bytes": 143,
-      "sha256": "a892e7dc25db37deec3785684bebc37b319b49630ab600373d5713a1f7053564"
-    },
-    {
-      "archivo": "Ybar.m",
-      "bytes": 141,
-      "sha256": "4ba19ac7eda80de2653511d5242188f7cbdedbf944bd799e2ed50aa52fe8c5ca"
-    },
-    {
-      "archivo": "Zbar.m",
-      "bytes": 138,
-      "sha256": "eba24ff35465493dca2ba42a5bf710292d7271ba9d9c8c444a85dae6d23e813c"
     }
   ]
 }

@@ -46,6 +46,6 @@ Consulta [fuentes y datos](python/docs/DATOS_Y_FUENTES.md), [limitaciones](pytho
 
 ## Derechos y contribuciones
 
-La licencia de reutilización permanece [pendiente](matlab/LICENCIA_PENDIENTE.md). La publicación pública no concede una licencia de código abierto ni resuelve derechos de fuentes de terceros. No se distribuyen PDFs o tablas originales. Las referencias bibliográficas y condiciones de los datos se documentan en cada implementación.
+Código abierto bajo [licencia MIT](LICENSE): permite utilizar, modificar y redistribuir el código, incluso comercialmente, conservando el aviso de copyright y la licencia. Se entrega sin garantías. Los materiales de terceros conservan sus derechos propios; la licencia no resuelve su titularidad. No se distribuyen PDFs o tablas originales. Las referencias bibliográficas y condiciones de los datos se documentan en cada implementación.
 
 Las pruebas automatizadas de GitHub Actions se encuentran en [Actions](https://github.com/LuisAngelOlveraOlvera/F16_AICRAFT_CONTROL_AND_SIMULATION_DYNAMICS/actions). Su resultado debe revisarse por separado de la validación local.

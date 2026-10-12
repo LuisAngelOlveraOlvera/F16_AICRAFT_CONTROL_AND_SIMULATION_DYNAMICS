@@ -1,6 +1,6 @@
 {
   "estado": "ENTREGA_PUBLICA_20261012",
-  "licencia": "PENDIENTE",
+  "licencia": "MIT",
   "convencion_hash": "Bytes almacenados en Git; texto CRLF normalizado a LF por gitattributes",
   "archivos": [
     {
@@ -24,14 +24,39 @@
       "sha256": "726c86d9115b382b6d3c5af294e6d85aad0c41b658e2ef8e155d10453c1edb60"
     },
     {
-      "archivo": "auditar_lateral_lewis.py",
-      "bytes": 151,
-      "sha256": "d2e155197b57b4ce25f1f509cebeadbbbb41f3237c8c9de8c169f80cc579733f"
-    },
-    {
       "archivo": "CHANGELOG.md",
       "bytes": 572,
       "sha256": "104250a4acaf7c23d2b8b18db90808606c4a833113dfba7d2caa0e363d077a7b"
+    },
+    {
+      "archivo": "CONTRIBUTING.md",
+      "bytes": 616,
+      "sha256": "0f0398410dbe3b8b660bc0f61b580bcb4ea9c99e0a878d060d8ba77dad52caa6"
+    },
+    {
+      "archivo": "LICENCIA_PENDIENTE.md",
+      "bytes": 1096,
+      "sha256": "a61e7497fbbda8989f0d2a7d59cde59dbcc37f5f3c53c17fcb63493496cc190c"
+    },
+    {
+      "archivo": "LICENSE",
+      "bytes": 1078,
+      "sha256": "4b9d84b3ab741cc4fa18a683202f820e3e24e7200354c061360e35acc6f933f4"
+    },
+    {
+      "archivo": "PUBLICAR_EN_GITHUB.md",
+      "bytes": 1786,
+      "sha256": "e68b1db0d817841e450c69d9e2297e67f43a40b293870f4449a1f2d2a54ef310"
+    },
+    {
+      "archivo": "README.md",
+      "bytes": 14126,
+      "sha256": "cef2ffd847afffdcd149bdff0a0d8e18561a9d241d44fa1c48af07293a392430"
+    },
+    {
+      "archivo": "auditar_lateral_lewis.py",
+      "bytes": 151,
+      "sha256": "d2e155197b57b4ce25f1f509cebeadbbbb41f3237c8c9de8c169f80cc579733f"
     },
     {
       "archivo": "comparar_f16_estandarizado.py",
@@ -44,19 +69,14 @@
       "sha256": "737b55196ceaf93897f3f7d38895f5c1f57c6971d34956518a0b038eb87f1e92"
     },
     {
-      "archivo": "CONTRIBUTING.md",
-      "bytes": 616,
-      "sha256": "0f0398410dbe3b8b660bc0f61b580bcb4ea9c99e0a878d060d8ba77dad52caa6"
-    },
-    {
       "archivo": "docs/CITACION.md",
       "bytes": 530,
       "sha256": "5101a6221d6684f8f6d55833743e62f3bc3b25251aa0bbac2edff9d80c6de49f"
     },
     {
       "archivo": "docs/DATOS_Y_FUENTES.md",
-      "bytes": 1558,
-      "sha256": "cd32160894f87acf165648032e1d249d75fecef0ec04e531207c9c4bebf2d75e"
+      "bytes": 1555,
+      "sha256": "8a29b48f38b05ca0186abe84cfefce304757ae1fb02c397fb2ab619bab15574d"
     },
     {
       "archivo": "docs/LIMITACIONES.md",
@@ -65,8 +85,8 @@
     },
     {
       "archivo": "docs/RESULTADO_VERIFICACION.md",
-      "bytes": 1545,
-      "sha256": "b8da199832679b7ad8a11d64182cb9a9f745765f687b3ddc06b6ea982c0871ab"
+      "bytes": 1641,
+      "sha256": "4518ad0c80595b9fb56bf24d6a51c54c1bed67422b8f13ca87804f067c9dd488"
     },
     {
       "archivo": "docs/VALIDACION.md",
@@ -157,11 +177,6 @@
       "archivo": "f16py/xlsx_source.py",
       "bytes": 1243,
       "sha256": "3baea192b1901e1c31fb973af3c7e5b26c2b0bafa03b5425b4355662bfb4f433"
-    },
-    {
-      "archivo": "LICENCIA_PENDIENTE.md",
-      "bytes": 841,
-      "sha256": "3615775407642a999b8e2e8a77ad5ccdaee827f54945b764d0aa49cdf0218d4b"
     },
     {
       "archivo": "pasos.py",
@@ -259,14 +274,9 @@
       "sha256": "bcedd801bb36223812448526c63f269b18f24ffb52432b8a944bff976bd6229c"
     },
     {
-      "archivo": "PUBLICAR_EN_GITHUB.md",
-      "bytes": 1694,
-      "sha256": "6db6860b0e448e36f23edd6e5f0f14fccfd748529682d5704b571174de7b6a6d"
-    },
-    {
-      "archivo": "README.md",
-      "bytes": 14135,
-      "sha256": "a9728969403411863907a316c957804fbb3cdbc237ea719c34a86ec57c5ebecc"
+      "archivo": "references/README.md",
+      "bytes": 440,
+      "sha256": "2bbb447d252c79d613d3c4eb1881476f81a44c4c963b8fa59182c3cad0abdbef"
     },
     {
       "archivo": "references/autopiloto.mat",
@@ -362,11 +372,6 @@
       "archivo": "references/paridad.mat",
       "bytes": 3685301,
       "sha256": "2d2ac2f1608cced96d9e1d7dfa073b5cfd388b8a8843501f1d22557710e6e35d"
-    },
-    {
-      "archivo": "references/README.md",
-      "bytes": 440,
-      "sha256": "2bbb447d252c79d613d3c4eb1881476f81a44c4c963b8fa59182c3cad0abdbef"
     },
     {
       "archivo": "references/trayectoria.mat",

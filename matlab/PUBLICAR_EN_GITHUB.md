@@ -8,7 +8,7 @@ No subir el directorio de trabajo completo ni las carpetas padre de preparación
 
 Los archivos MAT de `python/references/` son excepciones deliberadas: las pruebas y algunos escenarios los necesitan. Su manifiesto documenta procedencia. La ausencia de las tablas originales limita la auditoría independiente de los ajustes.
 
-La licencia sigue pendiente; no se eligieron términos de reutilización en nombre del autor. Véase `matlab/LICENCIA_PENDIENTE.md`. No se incluyen secretos de MATLAB: cuando sea necesario, configurar `MLM_LICENSE_TOKEN` únicamente en GitHub Secrets.
+El código se publica bajo licencia MIT por decisión del propietario: permite uso, modificación y redistribución conservando el aviso de copyright y la licencia. Los derechos de terceros conservan sus condiciones propias. No se incluyen secretos de MATLAB: cuando sea necesario, configurar `MLM_LICENSE_TOKEN` únicamente en GitHub Secrets.
 
 Los flujos de CI ejecutables están en `.github/workflows/` de la raíz. Los archivos de workflow dentro de cada implementación se conservan como configuración de sus paquetes independientes; GitHub no los ejecuta desde esas ubicaciones.
 

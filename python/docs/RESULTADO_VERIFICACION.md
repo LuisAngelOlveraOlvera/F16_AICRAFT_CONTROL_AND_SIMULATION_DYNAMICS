@@ -24,4 +24,4 @@ respaldos y cachés ignorados; referencias MAT de prueba permitidas.
 Workflow preparado, no probado en GitHub.
 No se realizó instalación limpia de dependencias en otra máquina/OS.
 No se eligió licencia ni se verificó titularidad jurídica de todo material.
-La licencia de reutilización sigue pendiente; no se añadió una licencia arbitraria.
+Actualización del 12 de octubre: el propietario autorizó código abierto y se añadió licencia MIT. La revisión de titularidad de material de terceros sigue siendo independiente.

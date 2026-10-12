@@ -10,4 +10,4 @@ Se revisó el contenido textual y los campos de texto de los archivos MAT para d
 
 Las dos guías de ejecución son idénticas. Los manifiestos de archivos se regeneran para esta entrega. Espacios al final de líneas heredadas de algunos archivos MATLAB no se cambiaron; no afectan esta verificación dinámica.
 
-La CI remota se verifica después de publicar. La licencia de reutilización y la titularidad de ajustes derivados siguen pendientes. Las pruebas no certifican fidelidad al avión real.
+La CI remota se verifica después de publicar. El propietario autorizó código abierto y se añadió licencia MIT el 12 de octubre de 2026. La titularidad de ajustes derivados se documenta por separado y no se declara verificada. Las pruebas no certifican fidelidad al avión real.

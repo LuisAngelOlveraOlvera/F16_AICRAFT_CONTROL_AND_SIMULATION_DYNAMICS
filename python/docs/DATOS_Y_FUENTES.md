@@ -23,5 +23,5 @@ Fuentes bibliográficas:
   configuración LEF/CG y términos de redistribución antes de adjuntarlos.
 
 Las referencias generadas son una validación de implementación, no prueba
-independiente de exactitud frente al avión real. La licencia futura del código
+independiente de exactitud frente al avión real. La licencia MIT del código
 no sustituye la revisión de derechos/procedencia de los ajustes derivados.
