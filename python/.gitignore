@@ -1,0 +1,36 @@
+# Resultados y evidencia local; no confundir con referencias de prueba
+resultados/
+resultados_f16_*/
+vuelo_waypoints_*/
+auditoria_*/
+comparacion_*/
+fuentes_nuevas/
+respaldo*/
+revision_*/
+datos_locales/
+local/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+*.asv
+*.fig
+*.mp4
+*.gif
+*.csv
+*.npz
+*.mat
+!references/*.mat
+!references/integral/**/registro.mat
+*.xlsx
+*.xls
+*.pdf
+.vscode/
+.spyproject/
+.DS_Store
+Thumbs.db
+# Los PNG de documentacion se permiten; los resultados van en carpetas ignoradas.

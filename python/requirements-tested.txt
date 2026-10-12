@@ -1,0 +1,5 @@
+# Versiones con las que se ejecuto la validacion de esta entrega (Python 3.12.6).
+numpy==2.0.1
+scipy==1.14.1
+matplotlib==3.9.3
+pillow==10.4.0

@@ -1,0 +1,17 @@
+function[u,v,w,p,q,r,q0,q1,q2,q3,xE,yE,zE,P3,alfaf]=asignaX(X)
+    u=X(1);
+    v=X(2);
+    w=X(3);
+    p=X(4);
+    q=X(5);
+    r=X(6);
+    q0=X(7);
+    q1=X(8);
+    q2=X(9);
+    q3=X(10);
+    xE=X(11);
+    yE=X(12);
+    zE=X(13);
+    P3=X(14);
+    alfaf=X(15);
+end

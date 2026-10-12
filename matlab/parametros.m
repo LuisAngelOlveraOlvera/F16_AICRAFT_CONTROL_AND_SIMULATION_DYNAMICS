@@ -1,0 +1,19 @@
+function[m,g,S,cbar,b,Xcgr,Xcg,c1,c2,c3,c4,c5,c6,c7,c8,c9,Heng]=parametros(theta)
+    m = theta(1);
+    g = theta(2);
+    S = theta(3);
+    cbar = theta(4);
+    b = theta(5);
+    Xcgr = theta(6);
+    Xcg = theta(7);
+    c1 = theta(8);
+    c2 = theta(9);
+    c3 = theta(10);
+    c4 = theta(11);
+    c5 = theta(12);
+    c6 = theta(13);
+    c7 = theta(14);
+    c8 = theta(15);
+    c9 = theta(16);
+    Heng = theta(17); 
+end

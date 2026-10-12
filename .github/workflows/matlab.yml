@@ -1,0 +1,18 @@
+name: MATLAB academic validation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2024a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: cd('matlab'); verificar_publicacion
+        env:
+          MLM_LICENSE_TOKEN: ${{ secrets.MLM_LICENSE_TOKEN }}

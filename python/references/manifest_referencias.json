@@ -1,0 +1,116 @@
+[
+  {
+    "archivo": "autopiloto.mat",
+    "sha256": "79fd7917a699e9c6b692b525baa87f0904d5e7dd629ff0a0f1bedb4524482d03",
+    "sha256_fuente": "e9aac3b2faeb614a0ccf227c531947ef3f58249bb782c68bcf1ad1a98bb5e1be",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "dryden_abierto.mat",
+    "sha256": "cf3f45fa6e7787ab90d85207923a1d966560c1a2192fbb1ccfd0652a21279af9",
+    "sha256_fuente": "ae124179f1d250b41995aa8fc69962610ed49a08dbca4ebc62f86025e701da49",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "dryden_lqr.mat",
+    "sha256": "e55dd601fdf8fb3a85ad5c2e82d7748db5b7d87b8289c2e61a8aec162d9157f3",
+    "sha256_fuente": "5fbbe425a61cfbe5cdde9eeaf01077afda7a1684de8156d60118eec0342c9a51",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "dryden_original.mat",
+    "sha256": "80b2ee2d11a0e85f727021abf75312fa00888d2b3960575195c489d409240244",
+    "sha256_fuente": "95f841f7d08b0ea4485d1ab3831896498eec83a274d0fac8e82ac00d8d4674bf",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "jacobiano15.mat",
+    "sha256": "8490a86e3017164bdfd2e71cf67b1e22ed91fed7537a69575702a1350454952f",
+    "sha256_fuente": "5cad2f31e68c3c39977769dcd4bf7a0916cdc5690164a971345828f9526e3329",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "matlab_reference.mat",
+    "sha256": "74997018402f8f530ba15a78e30a03fa03d11b03df9e2997b1eb4362b7dc82e9",
+    "sha256_fuente": "1f304647c0c20a1caf59a5ccbb6d6b1292406ec684dd2619836e1891ab802409",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "paridad.mat",
+    "sha256": "2d2ac2f1608cced96d9e1d7dfa073b5cfd388b8a8843501f1d22557710e6e35d",
+    "sha256_fuente": "394e7e867f0bc13aa377a6b82c4ea2455bfe3d7df4c13744b477726401bc8da6",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "trayectoria.mat",
+    "sha256": "bdcbbf8f44615a62379bd0810461b955158507d9dfb6717dd16037431cf1b9c4",
+    "sha256_fuente": "f98b36b36b555c678e041b26f9c4a6923424717409c58e996492a3778206d44d",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "waypoints.mat",
+    "sha256": "5534633baf606004da0e9585400bb6c35c2852eb38904d0ffac8279ac99303fd",
+    "sha256_fuente": "9977734c3159c46e220960c3c5d68e007244e94dec67bf6a4898c9b4d78f05af",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/nivelado/registro.mat",
+    "sha256": "c08ac41b7ec8974d4fcdca3de490511c68354de662352f06addd47cf9972e2fc",
+    "sha256_fuente": "a509428d5df9e95586a045813a279a00f09eebefec41d219cec5f0ff80d033a8",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/lateral_abierto/registro.mat",
+    "sha256": "367a95ee92a804488d91ebc3c642e1b01fe91071320d6fede5acc1398f6da30f",
+    "sha256_fuente": "70a6d1f4aa2ccae8a6332d81a634f9c33604d4bc6cf9128d318d7b4e4ca90929",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/longitudinal_abierto/registro.mat",
+    "sha256": "587fe42b56d9ae1dceb0aa00ebb374fab94e57d28c03d15c87cf3bd0d5aca3d2",
+    "sha256_fuente": "e67f353280ba6395877c1ba2af9c33e05c8fb4e2beda78b5a6cbf6a691c82949",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/lateral_lqr/registro.mat",
+    "sha256": "51ebbc2955ee121ac82c6971e28ad54541dcdf5e117f62413367b782690ac930",
+    "sha256_fuente": "0002d7644601abe50259b2605c0b55a4bd8dc1ffcf42a6c4547237288677f81c",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/viraje/registro.mat",
+    "sha256": "2290a76bb93965f1a9d486cec53228e040ea0fac28e93752c11408584385e603",
+    "sha256_fuente": "9f9ab443d40667dd15e78d927196954d8065cfb295c34df101a22dec81e529c1",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/ascenso/registro.mat",
+    "sha256": "41b5bd5f5ae080998dc0b63aa8be4d4ab2449f31a700189a2b44b4b4444c0e1c",
+    "sha256_fuente": "679ea8832fee07b5cc50372d390b4da0dc47b0d629f5d47c3e2cb38b297905ac",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/autopiloto/registro.mat",
+    "sha256": "c23f22f1a1138469fa739defa8441fb21ae369d18a62a495b32f81a065ec917e",
+    "sha256_fuente": "4df7d8126bd59a6d469f81bc345b5685e3fd4a8e75a039e8d45166e56cfdb945",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/trayectoria/registro.mat",
+    "sha256": "24c7b6c957e1eaee27874f840c1e7630d459d9258d78795b373bc8d4000afa37",
+    "sha256_fuente": "f73bc135d12b95bda31fb684a424bedb5bdf4f93460566be07eae9bb54c57068",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/dryden_abierto/registro.mat",
+    "sha256": "de93af704906f05295b3d99a18548b6b74b50219f808e82446ce71aa2e5a8844",
+    "sha256_fuente": "ae124179f1d250b41995aa8fc69962610ed49a08dbca4ebc62f86025e701da49",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  },
+  {
+    "archivo": "integral/dryden_lqr/registro.mat",
+    "sha256": "e889a2d8d3e21571e7c5ab480ba6f6e7b927e87f3817c65ae0ea6c07f954939a",
+    "sha256_fuente": "5fbbe425a61cfbe5cdde9eeaf01077afda7a1684de8156d60118eec0342c9a51",
+    "origen": "MATLAB generado localmente; metadatos depurados, valores numericos conservados"
+  }
+]

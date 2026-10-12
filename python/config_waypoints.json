@@ -1,0 +1,10 @@
+{
+  "escenario": "waypoints",
+  "duracion": 180,
+  "paso": 0.002,
+  "VT": 170,
+  "altitud": 3000,
+  "anticipacion_m": 2000,
+  "radio_captura_m": 250,
+  "waypoints_ned": [[0,0,-3000],[8000,0,-3100],[16000,3000,-3200],[24000,3000,-3100]]
+}

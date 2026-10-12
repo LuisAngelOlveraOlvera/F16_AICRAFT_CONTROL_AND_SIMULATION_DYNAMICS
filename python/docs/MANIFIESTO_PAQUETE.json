@@ -1,0 +1,472 @@
+{
+  "estado": "ENTREGA_PUBLICA_20261012",
+  "licencia": "PENDIENTE",
+  "convencion_hash": "Bytes almacenados en Git; texto CRLF normalizado a LF por gitattributes",
+  "archivos": [
+    {
+      "archivo": ".gitattributes",
+      "bytes": 125,
+      "sha256": "f38e01fc97d0d5ad28199e80f91ef89276fea833badc0ebc21c09cfe924eb0cf"
+    },
+    {
+      "archivo": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "bytes": 385,
+      "sha256": "f1d420e81d525d90b75c63eff44e4b6b15825d7a036ccbafb4ef478c2ce7e6e6"
+    },
+    {
+      "archivo": ".github/workflows/tests.yml",
+      "bytes": 547,
+      "sha256": "a5823b0fc068bdbcd7a8c6672db0074c83b4790c35ee7f79d24751be7561759e"
+    },
+    {
+      "archivo": ".gitignore",
+      "bytes": 517,
+      "sha256": "726c86d9115b382b6d3c5af294e6d85aad0c41b658e2ef8e155d10453c1edb60"
+    },
+    {
+      "archivo": "auditar_lateral_lewis.py",
+      "bytes": 151,
+      "sha256": "d2e155197b57b4ce25f1f509cebeadbbbb41f3237c8c9de8c169f80cc579733f"
+    },
+    {
+      "archivo": "CHANGELOG.md",
+      "bytes": 572,
+      "sha256": "104250a4acaf7c23d2b8b18db90808606c4a833113dfba7d2caa0e363d077a7b"
+    },
+    {
+      "archivo": "comparar_f16_estandarizado.py",
+      "bytes": 161,
+      "sha256": "28eca4a9bf4a555e410a33639220ddfb978d00840d901628822417604e31f287"
+    },
+    {
+      "archivo": "config_waypoints.json",
+      "bytes": 238,
+      "sha256": "737b55196ceaf93897f3f7d38895f5c1f57c6971d34956518a0b038eb87f1e92"
+    },
+    {
+      "archivo": "CONTRIBUTING.md",
+      "bytes": 616,
+      "sha256": "0f0398410dbe3b8b660bc0f61b580bcb4ea9c99e0a878d060d8ba77dad52caa6"
+    },
+    {
+      "archivo": "docs/CITACION.md",
+      "bytes": 530,
+      "sha256": "5101a6221d6684f8f6d55833743e62f3bc3b25251aa0bbac2edff9d80c6de49f"
+    },
+    {
+      "archivo": "docs/DATOS_Y_FUENTES.md",
+      "bytes": 1558,
+      "sha256": "cd32160894f87acf165648032e1d249d75fecef0ec04e531207c9c4bebf2d75e"
+    },
+    {
+      "archivo": "docs/LIMITACIONES.md",
+      "bytes": 1028,
+      "sha256": "5b90dbcc0fa262d2a3934a57180f2f47e029ea335b5d3fd1552a2802a19ed9f9"
+    },
+    {
+      "archivo": "docs/RESULTADO_VERIFICACION.md",
+      "bytes": 1545,
+      "sha256": "b8da199832679b7ad8a11d64182cb9a9f745765f687b3ddc06b6ea982c0871ab"
+    },
+    {
+      "archivo": "docs/VALIDACION.md",
+      "bytes": 1384,
+      "sha256": "d9d29b25f84e8f5e13718603b7de4e38f74f868d1b67d5482e130d3efcd7cc79"
+    },
+    {
+      "archivo": "ejecutar.py",
+      "bytes": 1879,
+      "sha256": "87d110e0ca9bda104e016c30e635e3ac0d2c2cde2752f8b0f2356d245ea17d31"
+    },
+    {
+      "archivo": "ejecutar_guia_f16.py",
+      "bytes": 143,
+      "sha256": "f28dbbe4b8e293ceadb83cd83d283b56e203efe6c2500c3e85dc91edcaf6914e"
+    },
+    {
+      "archivo": "ejecutar_waypoints_f16.py",
+      "bytes": 153,
+      "sha256": "6239e540246f7791a8444dad12148c5310ad6d5b0e1986d66178dc7df3a76d76"
+    },
+    {
+      "archivo": "f16py/__init__.py",
+      "bytes": 75,
+      "sha256": "d8e7d9a228b1a20807d65a1ff90780fef9780c1aed356b6ce55d0e091c94ead7"
+    },
+    {
+      "archivo": "f16py/aerodynamics.py",
+      "bytes": 1502,
+      "sha256": "c1e7cd52b0624575ba010b240eb9a507918b495be65645440595706b1ee17179"
+    },
+    {
+      "archivo": "f16py/audit.py",
+      "bytes": 16939,
+      "sha256": "940776236c0e291dd2b7fd954f91b85d63275f434eeffce0daa36b814285eca9"
+    },
+    {
+      "archivo": "f16py/control.py",
+      "bytes": 5790,
+      "sha256": "ab659366c4fcb4d88f311a596afb9e37dc5f37d691f67971d4f3205ff7b24f0d"
+    },
+    {
+      "archivo": "f16py/demonstrations.py",
+      "bytes": 6478,
+      "sha256": "2aa64fef0e82438b0bda4e5093188aa57a6e8e779a00cf0af9763bdd49a64e2a"
+    },
+    {
+      "archivo": "f16py/dynamics.py",
+      "bytes": 5284,
+      "sha256": "e5918b626caaaf94816a755d55f197b602c947cc0481aaaa212f15eb377ed90f"
+    },
+    {
+      "archivo": "f16py/execution.py",
+      "bytes": 15927,
+      "sha256": "2e0db670ae313930471b454bb17b40735d49d793ef2fef9f33740f43a9dfa05c"
+    },
+    {
+      "archivo": "f16py/fits.py",
+      "bytes": 18853,
+      "sha256": "327dca6b58181cefd6d5bcc5a4a5a6680cbd075e41e5fc92d573a3b254e16951"
+    },
+    {
+      "archivo": "f16py/guidance.py",
+      "bytes": 1331,
+      "sha256": "dc5bd04c757e1fb015e60b8696182904c3a5e0fe45be2928d7ed892a9295cdee"
+    },
+    {
+      "archivo": "f16py/io.py",
+      "bytes": 1954,
+      "sha256": "f67277836e443776ca7897a5572d23049feea954c06daddd0b16b1f0d10884b8"
+    },
+    {
+      "archivo": "f16py/simulation.py",
+      "bytes": 10338,
+      "sha256": "dec21e43238bfa592b0bac5889a6f8e8c90e47d71ba49fc296050da25e6d92a1"
+    },
+    {
+      "archivo": "f16py/validation.py",
+      "bytes": 564,
+      "sha256": "2dcc4ffc495f64a64c4d37d0c69af286235bc7f715f22854d190c468d37f288d"
+    },
+    {
+      "archivo": "f16py/visualization.py",
+      "bytes": 9457,
+      "sha256": "3b2c3f0b613561dd950623f61e207a1c3ae4adf29fbae2417971155f085d3688"
+    },
+    {
+      "archivo": "f16py/xlsx_source.py",
+      "bytes": 1243,
+      "sha256": "3baea192b1901e1c31fb973af3c7e5b26c2b0bafa03b5425b4355662bfb4f433"
+    },
+    {
+      "archivo": "LICENCIA_PENDIENTE.md",
+      "bytes": 841,
+      "sha256": "3615775407642a999b8e2e8a77ad5ccdaee827f54945b764d0aa49cdf0218d4b"
+    },
+    {
+      "archivo": "pasos.py",
+      "bytes": 64,
+      "sha256": "aa34d8329987fa58ace790ad917774ad70eb8c5aa062c3fef171266cd78e0c9b"
+    },
+    {
+      "archivo": "prueba_6dof_estandarizado.py",
+      "bytes": 159,
+      "sha256": "2153d41c47f4e9909010e455a6e357cfe530070b335a3a1169d37d7be3c03802"
+    },
+    {
+      "archivo": "prueba_autopiloto.py",
+      "bytes": 143,
+      "sha256": "d487e07e62002a8c386087f7fbbcc5292c99b65e18b55c6709b1622d763c213c"
+    },
+    {
+      "archivo": "prueba_bordes_guia_f16.py",
+      "bytes": 153,
+      "sha256": "7f63d802479d72ec80cdadf28126780183a63ed14d1145f46e4709b97f05291d"
+    },
+    {
+      "archivo": "prueba_calc_ABCD.py",
+      "bytes": 141,
+      "sha256": "ffcf69d4a1086bae3e7ca93cf21dba14ada93c2bb7c2bce94d52c5c9d7d9f0c4"
+    },
+    {
+      "archivo": "prueba_comparacion.py",
+      "bytes": 145,
+      "sha256": "e704df0232e808317aade454edb5a36abe2b4c6e779b074ce498f750a73d67b3"
+    },
+    {
+      "archivo": "prueba_dryden.py",
+      "bytes": 135,
+      "sha256": "76d439b9fe23df5343edfb3f8a532d056b8a6f0ec8150603fd52906ae4266675"
+    },
+    {
+      "archivo": "prueba_exportacion_json_f16.py",
+      "bytes": 163,
+      "sha256": "58b2912a238da6dc85b3f590e8d0459bbc7a0ecdea7adc622813506ba3992828"
+    },
+    {
+      "archivo": "prueba_lqr.py",
+      "bytes": 129,
+      "sha256": "4988a572ab382cde4fa92d5f57402dfc705056b66f05f15ff0e17e97542072e7"
+    },
+    {
+      "archivo": "prueba_lqr_lat.py",
+      "bytes": 137,
+      "sha256": "bfaf06199133b65f69fb4638e60e6edf1aa808d5f7497378db706a36a65aeef8"
+    },
+    {
+      "archivo": "prueba_paso_waypoints_f16.py",
+      "bytes": 159,
+      "sha256": "98a1a5b69954a1f26288b208d22c17eaecdcde8e06d34ace949f2b8b8e70a058"
+    },
+    {
+      "archivo": "prueba_regresion_lewis.py",
+      "bytes": 153,
+      "sha256": "79fc8db7edbe43b859919e5f314d978c4bccae3b7695946e5c591c159ccebc4a"
+    },
+    {
+      "archivo": "prueba_ruta_salida_f16.py",
+      "bytes": 153,
+      "sha256": "55443a8b4fd9fe5fca155eeb0e79b2d94a4469001281b35c589ae869d8bb01aa"
+    },
+    {
+      "archivo": "prueba_simulador_academico.py",
+      "bytes": 161,
+      "sha256": "fa51a53ad2373e79d1bff4dfb80627e14160ffc3b7bf54f0d427221e5e77de01"
+    },
+    {
+      "archivo": "prueba_trayectoria.py",
+      "bytes": 145,
+      "sha256": "91aad657203994ecb0fec6afdb409078fd8af37f9e6881ac4e1d0dab1064d2df"
+    },
+    {
+      "archivo": "prueba_trim_refinado.py",
+      "bytes": 149,
+      "sha256": "c2dcb6f9b2eadc0b827256d6e0c0ae2898d4e156efb8a4c447109ae54ec7d00d"
+    },
+    {
+      "archivo": "prueba_visualizacion_f16.py",
+      "bytes": 157,
+      "sha256": "e5d425296a4e417bd6607cad487416a91d576fdd094d6130cb0e22020f0eafc0"
+    },
+    {
+      "archivo": "prueba_waypoints_f16.py",
+      "bytes": 149,
+      "sha256": "fbbf4e7078ee2b6999d147cc6e228b6befeba251e47e97248e284ff0393ab350"
+    },
+    {
+      "archivo": "pruebarkf.py",
+      "bytes": 127,
+      "sha256": "bcedd801bb36223812448526c63f269b18f24ffb52432b8a944bff976bd6229c"
+    },
+    {
+      "archivo": "PUBLICAR_EN_GITHUB.md",
+      "bytes": 1694,
+      "sha256": "6db6860b0e448e36f23edd6e5f0f14fccfd748529682d5704b571174de7b6a6d"
+    },
+    {
+      "archivo": "README.md",
+      "bytes": 14135,
+      "sha256": "a9728969403411863907a316c957804fbb3cdbc237ea719c34a86ec57c5ebecc"
+    },
+    {
+      "archivo": "references/autopiloto.mat",
+      "bytes": 3028617,
+      "sha256": "79fd7917a699e9c6b692b525baa87f0904d5e7dd629ff0a0f1bedb4524482d03"
+    },
+    {
+      "archivo": "references/dryden_abierto.mat",
+      "bytes": 1520199,
+      "sha256": "cf3f45fa6e7787ab90d85207923a1d966560c1a2192fbb1ccfd0652a21279af9"
+    },
+    {
+      "archivo": "references/dryden_lqr.mat",
+      "bytes": 2016316,
+      "sha256": "e55dd601fdf8fb3a85ad5c2e82d7748db5b7d87b8289c2e61a8aec162d9157f3"
+    },
+    {
+      "archivo": "references/dryden_original.mat",
+      "bytes": 1480773,
+      "sha256": "80b2ee2d11a0e85f727021abf75312fa00888d2b3960575195c489d409240244"
+    },
+    {
+      "archivo": "references/fuentes_ajustes.json",
+      "bytes": 8592,
+      "sha256": "0e514f8cf0fb95ae29d5cc29a8cd318761dde7e55db9582a10e845b3ee862d06"
+    },
+    {
+      "archivo": "references/integral/ascenso/registro.mat",
+      "bytes": 1072554,
+      "sha256": "41b5bd5f5ae080998dc0b63aa8be4d4ab2449f31a700189a2b44b4b4444c0e1c"
+    },
+    {
+      "archivo": "references/integral/autopiloto/registro.mat",
+      "bytes": 3028617,
+      "sha256": "c23f22f1a1138469fa739defa8441fb21ae369d18a62a495b32f81a065ec917e"
+    },
+    {
+      "archivo": "references/integral/dryden_abierto/registro.mat",
+      "bytes": 1520199,
+      "sha256": "de93af704906f05295b3d99a18548b6b74b50219f808e82446ce71aa2e5a8844"
+    },
+    {
+      "archivo": "references/integral/dryden_lqr/registro.mat",
+      "bytes": 2016316,
+      "sha256": "e889a2d8d3e21571e7c5ab480ba6f6e7b927e87f3817c65ae0ea6c07f954939a"
+    },
+    {
+      "archivo": "references/integral/lateral_abierto/registro.mat",
+      "bytes": 1407023,
+      "sha256": "367a95ee92a804488d91ebc3c642e1b01fe91071320d6fede5acc1398f6da30f"
+    },
+    {
+      "archivo": "references/integral/lateral_lqr/registro.mat",
+      "bytes": 925211,
+      "sha256": "51ebbc2955ee121ac82c6971e28ad54541dcdf5e117f62413367b782690ac930"
+    },
+    {
+      "archivo": "references/integral/longitudinal_abierto/registro.mat",
+      "bytes": 965847,
+      "sha256": "587fe42b56d9ae1dceb0aa00ebb374fab94e57d28c03d15c87cf3bd0d5aca3d2"
+    },
+    {
+      "archivo": "references/integral/nivelado/registro.mat",
+      "bytes": 588306,
+      "sha256": "c08ac41b7ec8974d4fcdca3de490511c68354de662352f06addd47cf9972e2fc"
+    },
+    {
+      "archivo": "references/integral/trayectoria/registro.mat",
+      "bytes": 13238937,
+      "sha256": "24c7b6c957e1eaee27874f840c1e7630d459d9258d78795b373bc8d4000afa37"
+    },
+    {
+      "archivo": "references/integral/viraje/registro.mat",
+      "bytes": 2105083,
+      "sha256": "2290a76bb93965f1a9d486cec53228e040ea0fac28e93752c11408584385e603"
+    },
+    {
+      "archivo": "references/jacobiano15.mat",
+      "bytes": 1688,
+      "sha256": "8490a86e3017164bdfd2e71cf67b1e22ed91fed7537a69575702a1350454952f"
+    },
+    {
+      "archivo": "references/manifest_referencias.json",
+      "bytes": 6059,
+      "sha256": "a20a63caef6c4c1d891812add95229d2f50bae40c30ef4ce1a2a476b9012214f"
+    },
+    {
+      "archivo": "references/matlab_reference.mat",
+      "bytes": 18578,
+      "sha256": "74997018402f8f530ba15a78e30a03fa03d11b03df9e2997b1eb4362b7dc82e9"
+    },
+    {
+      "archivo": "references/paridad.mat",
+      "bytes": 3685301,
+      "sha256": "2d2ac2f1608cced96d9e1d7dfa073b5cfd388b8a8843501f1d22557710e6e35d"
+    },
+    {
+      "archivo": "references/README.md",
+      "bytes": 440,
+      "sha256": "2bbb447d252c79d613d3c4eb1881476f81a44c4c963b8fa59182c3cad0abdbef"
+    },
+    {
+      "archivo": "references/trayectoria.mat",
+      "bytes": 13238937,
+      "sha256": "bdcbbf8f44615a62379bd0810461b955158507d9dfb6717dd16037431cf1b9c4"
+    },
+    {
+      "archivo": "references/waypoints.mat",
+      "bytes": 12236797,
+      "sha256": "5534633baf606004da0e9585400bb6c35c2852eb38904d0ffac8279ac99303fd"
+    },
+    {
+      "archivo": "requirements-tested.txt",
+      "bytes": 142,
+      "sha256": "a071fa3bdd0c513d4783023763499079a7c604bb98809e0206c18480d53285e0"
+    },
+    {
+      "archivo": "requirements.txt",
+      "bytes": 60,
+      "sha256": "18da8be55725893afdaa816a79e5bf8e05c42570779b1f0f77a2c4e193394311"
+    },
+    {
+      "archivo": "run_tests.py",
+      "bytes": 127,
+      "sha256": "bdb1538a159e2309bb5764231d2bfe73c96614a6572845223a1584808b3adb0a"
+    },
+    {
+      "archivo": "sensibilidad_jacobiano_6dof.py",
+      "bytes": 163,
+      "sha256": "6a681695e5fece872126df6d577f70efda2c7aecca0e0499d88bfcdae6df357c"
+    },
+    {
+      "archivo": "tests/test_features.py",
+      "bytes": 5681,
+      "sha256": "7ee47b2d7a0b92ba54a790cfc8cd38cbdb539d6a668841e5666e3d1d848deaee"
+    },
+    {
+      "archivo": "tests/test_matlab.py",
+      "bytes": 3901,
+      "sha256": "e7efee92f75bcc9be94dd05561f6494e673ec312ecd499e5cfccfc19528135e9"
+    },
+    {
+      "archivo": "tests/test_parity.py",
+      "bytes": 5799,
+      "sha256": "46414d23f2f60a49ac78b8d83f6fc18c429051793668965873f8575f1575db6f"
+    },
+    {
+      "archivo": "tests/test_replica.py",
+      "bytes": 1031,
+      "sha256": "2d065f8b613de43c04dc7d99fd9a843b5b66a7720161ebba6e9f18786d6c3254"
+    },
+    {
+      "archivo": "tools/preparar_referencias.py",
+      "bytes": 2716,
+      "sha256": "cd5dd5146593e5e586c80c83070fe66cb260f2eb7eda96495779249369af22ab"
+    },
+    {
+      "archivo": "validar_A.py",
+      "bytes": 127,
+      "sha256": "d362fa3e4fbd1991b7d38b5cca78bc4077e410a0816fe2d0849741804fb4864f"
+    },
+    {
+      "archivo": "validar_fuentes_aerodinamicas.py",
+      "bytes": 167,
+      "sha256": "06a752e06468b10ff55b669d6bbdffde572d3f067c5e26227a9ea5ba57e4fdfa"
+    },
+    {
+      "archivo": "validar_integral.py",
+      "bytes": 1655,
+      "sha256": "89195fce954143f9ce49a74a37ca965d2d346c6da36713c0ea2cb40242a51c94"
+    },
+    {
+      "archivo": "validar_lewis.py",
+      "bytes": 135,
+      "sha256": "ad7f9dc49ec3b671ce154081dd57056d972810dc1acbe2172b4fa42a94e3e1d5"
+    },
+    {
+      "archivo": "validar_paridad.py",
+      "bytes": 1340,
+      "sha256": "a01f6b43322a58f17665888bf7a16c1e08548ecb76fa7d2d02db242174b2dd61"
+    },
+    {
+      "archivo": "validar_replica.py",
+      "bytes": 4863,
+      "sha256": "88e0a4e50009e5d4ea26aac17d9ef2ca73e68b716c77f71374c377d2f3150589"
+    },
+    {
+      "archivo": "ver_simulacion_f16.py",
+      "bytes": 481,
+      "sha256": "f932fa53981023095e7cfa8018916b5e0519e45ca1aa08f2fe3a7cf6fc3654d6"
+    },
+    {
+      "archivo": "verificar_publicacion.py",
+      "bytes": 1424,
+      "sha256": "f9661953192cbae986059963b2c309e42a80f8267cb6a49057ebaf8206928f6a"
+    },
+    {
+      "archivo": "verificar_simetria.py",
+      "bytes": 145,
+      "sha256": "d8493f2aa54dc6853071943328e016f0246ab160eef1c62a4e99c4d5fc902b8a"
+    }
+  ]
+}
