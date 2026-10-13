@@ -28,3 +28,9 @@ Usar el mismo intérprete de las dependencias comprobadas. El lanzador Windows p
 Se verificó escritorio Windows; no se ejecutó la interfaz nativa en Linux/macOS ni GitHub Actions para esta rama. La suite permite omitir pruebas Tk cuando no hay display. No se repitieron todos los vuelos largos y videos de cada paso del README: la evidencia de compatibilidad consiste en defaults, llamadas directas, referencias numéricas, suite existente y comandos representativos. La geometría del avión es docente y los datos físicos corresponden al modelo; no constituyen certificación del avión real. La interfaz MATLAB todavía no está implementada.
 
 El manifiesto de la entrega 20261012 conserva su carácter histórico. Cada nuevo ensayo registra hashes de sus fuentes y de los fixtures de referencia utilizados; no se presenta el manifiesto histórico como hash vigente de esta ampliación.
+
+## Ampliación posterior: pestaña Estados
+
+Se añadió una novena pestaña con nueve paneles físicos y referencias, selección temporal por gráfica, controles de reproducción propios y cursor/selección de ensayo compartidos con la vista 3D. Se abre automáticamente después del cálculo. Los defaults y el motor numérico no se modificaron.
+
+Validación de esta ampliación: 19 pruebas de laboratorio/UI y 2 de gráficas de estados, todas correctas; verificador de estructura PASS. La prueba real de proceso, A/B, exportación, cancelación y capturas volvió a pasar. Se inspeccionó la captura de Estados. No se repitió la suite numérica larga, pues el cambio solo añade presentación y la lógica de cálculo no tiene diferencias contra el commit anterior. La cifra 42 de arriba corresponde a la entrega inicial.

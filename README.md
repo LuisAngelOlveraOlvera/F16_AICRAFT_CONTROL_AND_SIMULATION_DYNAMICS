@@ -52,8 +52,8 @@ Las pruebas automatizadas de GitHub Actions se encuentran en [Actions](https://g
 
 ## Laboratorio visual Python
 
-Interfaz de escritorio independiente con ocho pestañas: avión, simulación,
-condiciones iniciales, control, ruta, turbulencia, comparación y vuelo/resultados.
+Interfaz de escritorio independiente con nueve pestañas: avión, simulación,
+condiciones iniciales, control, ruta, turbulencia, estados, comparación y vuelo/resultados.
 Los puntos de entrada y configuraciones originales de ambos README se conservan.
 Cada perfil abre sus valores originales; los ensayos personalizados son explícitos.
 

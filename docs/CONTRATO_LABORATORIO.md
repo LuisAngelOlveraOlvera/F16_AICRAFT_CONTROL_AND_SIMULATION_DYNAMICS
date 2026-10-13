@@ -2,6 +2,8 @@
 
 Implementación inicial: Python. MATLAB se implementará con motor visual propio, conservando la misma organización y entradas equivalentes. No se utiliza MATLAB Engine ni una interfaz compartida de cálculo.
 
+La pestaña Estados presenta nueve paneles físicos con referencias y selección temporal compartida con el vuelo. El modelo de datos y los defaults permanecen iguales; esta ampliación solo consume registros calculados.
+
 ## Entrada
 
 JSON con `contrato: 1`, `perfil` y `opciones`. Perfiles: pid, lqr_longitudinal, lqr_lateral, comparacion, autopiloto, dryden_original, trayectoria_original, waypoints, generico. Valores originales definidos por experimento en `python/f16py/laboratory/profiles.py` y documentados en GUIA_LABORATORIO.

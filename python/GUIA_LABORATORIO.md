@@ -12,7 +12,7 @@ En Windows también se puede abrir `ABRIR_LABORATORIO.bat`. Utilizar el mismo Py
 
 1. Elegir el experimento de la lista superior. Se cargan sus valores originales.
 2. Mantener marcada **Configuración original README** y pulsar **Simular**.
-3. El cálculo ocurre en un proceso independiente. **Cancelar** lo detiene conservando registros anteriores.
+3. El cálculo ocurre en un proceso independiente. **Cancelar** lo detiene conservando registros anteriores. Al terminar se abre **Estados**, con nueve gráficas simultáneas del ensayo.
 4. En **Vuelo y resultados**, reproducir, mover el tiempo o cambiar la cámara. Arrastrar sobre el avión rota la vista; la barra de Matplotlib permite explorar las figuras.
 5. En **Comparación**, guardar B como A. Desactivar el modo original, cambiar una opción habilitada y simular B. Ambos registros conservan sus condiciones; modificar un formulario no modifica un resultado ya calculado.
 6. **Restaurar original** recupera el perfil seleccionado, no una configuración global.
@@ -38,6 +38,7 @@ Todos los perfiles anteriores usan VT=170 m/s, altitud=3000 m y paso=0.002 s. El
 - **Control:** ganancias PID; factores positivos de los pesos originales Q/R de LQR/LQI; cambios y límites de referencia; ascenso/viraje; amplitudes aleatorias de trayectoria; mandos manuales con límites físicos actuales. Se habilitan únicamente campos aplicables.
 - **Ruta:** tabla N/E/altitud positiva, añadir/actualizar/eliminar/ordenar puntos y plano editable por selección. Pulsar en el plano rellena N/E del editor; aplicar con Añadir o Actualizar. La altitud inicial debe coincidir con trim. Conversión a NED interna.
 - **Turbulencia:** sigma por componente y longitudes de escala. La generación local sigue siendo Dryden simplificado. Para paridad futura MATLAB/Python se necesitan entradas de ruido comunes, no solamente una semilla idéntica.
+- **Estados:** nueve paneles de altitud, velocidad, alfa/beta, alabeo/cabeceo, rumbo, p/q/r, potencia del motor, filtro/deflexión LEF y posición Norte/Este. Incluye referencias de h/VT/rumbo y alfa cuando el ensayo las registra. La actitud se presenta en Euler a partir del registro; no se muestran aquí las cuatro componentes del cuaternión ni los estados internos de actuadores. Cursor temporal compartido con el vuelo: reproducir, deslizar el tiempo o pulsar una gráfica. Seleccionar un ensayo en cualquiera de las dos pestañas actualiza ambas. Zoom y desplazamiento con la barra Matplotlib; al activar estas herramientas, pulsar la gráfica no cambia el tiempo. Las curvas largas se reducen a un máximo de 2500 puntos solo para visualización; el registro original permanece completo.
 - **Comparación:** A/B, variables, referencias y métricas RMS respecto a la referencia de cada ensayo. Comparar mismas condiciones antes de atribuir diferencias a un controlador.
 - **Vuelo y resultados:** trayectoria y actitud 3D calculadas, tiempo, velocidad de reproducción, cámara, telemetría y exportación.
 

@@ -76,6 +76,50 @@ def plot_comparison(fig,a,b,variable):
     if a is not None or b is not None:ax.legend(loc='best')
     return ax
 
+class StatesView:
+    """Nueve paneles de estados físicos, sin modificar el registro."""
+    def __init__(self,fig):self.fig=fig;self.record=None;self.axes={};self.cursors=[]
+    def set_record(self,r):
+        self.record=r;self.fig.clear();self.axes={};self.cursors=[]
+        panels=[('altitud','Altitud','h [m]'),('velocidad','Velocidad','VT [m/s]'),
+          ('aero','Ángulos aerodinámicos','[°]'),('actitud','Actitud','[°]'),
+          ('rumbo','Rumbo','ψ [°]'),('tasas','Tasas de giro','[°/s]'),
+          ('motor','Potencia del motor','P3 [%]'),('lef','Filtro y deflexión LEF','[°]'),
+          ('posicion','Posición horizontal','[m]')]
+        ix=np.unique(np.linspace(0,len(r['t'])-1,min(2500,len(r['t']))).astype(int));t=r['t'][ix]
+        series={
+          'altitud':[(r['altitud_m'],'Real')],
+          'velocidad':[(r['X'][:,2],'Real')],
+          'aero':[(np.degrees(r['X'][:,3]),'α'),(np.degrees(r['X'][:,4]),'β')],
+          'actitud':[(np.degrees(r['angulos_rad'][:,0]),'φ'),(np.degrees(r['angulos_rad'][:,1]),'θ')],
+          'rumbo':[(np.degrees(np.unwrap(r['angulos_rad'][:,2])),'Real')],
+          'tasas':[(np.degrees(r['X'][:,5]),'p'),(np.degrees(r['X'][:,6]),'q'),(np.degrees(r['X'][:,7]),'r')],
+          'motor':[(r['X'][:,0],'P3')],
+          'lef':[(r['X'][:,1],'α filtro'),(r['LEF_deg'],'LEF')],
+          'posicion':[(r['X'][:,12],'Norte'),(r['X'][:,13],'Este')]}
+        refs={'altitud':r['referencia'][:,0],'velocidad':r['referencia'][:,1],
+              'rumbo':np.degrees(np.unwrap(r['referencia'][:,2]))}
+        if 'referencia_alfa_deg' in r:refs['aero']=r['referencia_alfa_deg']
+        first=None
+        for i,(key,title,unit) in enumerate(panels):
+            ax=self.fig.add_subplot(3,3,i+1,sharex=first);first=ax if first is None else first;self.axes[key]=ax
+            for j,(values,label) in enumerate(series[key]):
+                ax.plot(t,values[ix],['-','--','-.'][j],linewidth=1.2,label=label)
+            if key in refs:ax.plot(t,refs[key][ix],':',color='#64717f',linewidth=1.2,label='Referencia')
+            ax.set(title=title,ylabel=unit);ax.grid(alpha=.2);ax.tick_params(labelsize=8)
+            ax.ticklabel_format(axis='y',useOffset=False)
+            ax.set_title(title,fontsize=10);ax.yaxis.label.set_size(9)
+            if i>=6:ax.set_xlabel('Tiempo [s]',fontsize=9)
+            else:ax.tick_params(labelbottom=False)
+            if len(series[key])>1 or key in refs:ax.legend(fontsize=7,ncol=min(3,len(series[key])+int(key in refs)),loc='best')
+            self.cursors.append(ax.axvline(r['t'][0],color='#526173',linewidth=.9))
+        self.cursor(r['t'][0])
+    def cursor(self,seconds):
+        if self.record is None:return 0
+        t=self.record['t'];k=min(len(t)-1,max(0,int(np.searchsorted(t,seconds,side='right')-1)))
+        for line in self.cursors:line.set_xdata([t[k],t[k]])
+        return k
+
 class FlightView:
     def __init__(self,fig):self.fig=fig;self.record=None
     def set_record(self,record):

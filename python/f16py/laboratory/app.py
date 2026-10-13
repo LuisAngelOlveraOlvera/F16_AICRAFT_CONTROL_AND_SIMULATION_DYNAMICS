@@ -10,7 +10,7 @@ import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg,NavigationToolbar2Tk
 from .profiles import PROFILES,defaults,applicable_fields
 from .experiments import aircraft_data,validate,validate_record
-from .views import figure,aircraft_figure,plot_comparison,FlightView,VARIABLES
+from .views import figure,aircraft_figure,plot_comparison,FlightView,StatesView,VARIABLES
 from .worker import ExperimentWorker
 
 FIELDS={
@@ -53,11 +53,11 @@ class LaboratoryApp:
         self.run_button=ttk.Button(bar,text='Simular',command=self.run);self.run_button.pack(side='right',padx=4)
         self.cancel_button=ttk.Button(bar,text='Cancelar',command=self.cancel,state='disabled');self.cancel_button.pack(side='right')
         self.notebook=ttk.Notebook(root);self.notebook.pack(fill='both',expand=True,padx=14,pady=4)
-        self.tabs={name:ttk.Frame(self.notebook,padding=12) for name in ['Avión','Simulación','Condiciones iniciales','Control','Ruta','Turbulencia','Comparación','Vuelo y resultados']}
+        self.tabs={name:ttk.Frame(self.notebook,padding=12) for name in ['Avión','Simulación','Condiciones iniciales','Control','Ruta','Turbulencia','Estados','Comparación','Vuelo y resultados']}
         for name,frame in self.tabs.items():self.notebook.add(frame,text=name)
         self.build_aircraft()
         for name,fields in FIELDS.items():self.build_form(name,fields)
-        self.build_route();self.build_comparison();self.build_flight()
+        self.build_route();self.build_comparison();self.build_flight();self.build_states()
         foot=ttk.Frame(root,padding=(16,8));foot.pack(fill='x',side='bottom',before=self.notebook);ttk.Label(foot,textvariable=self.status,wraplength=1000).pack(side='left',fill='x',expand=True)
         self.progress=ttk.Progressbar(foot,mode='indeterminate',length=120);self.progress.pack(side='right')
         self.load_profile('pid');root.protocol('WM_DELETE_WINDOW',self.close);self.poll_id=root.after(120,self.poll)
@@ -147,6 +147,21 @@ class LaboratoryApp:
 
     def load_profile(self,profile):
         self.profile=profile;self.profile_name.set(PROFILES[profile][0]);self.apply_config(defaults(profile));self.status.set('Configuración original README restaurada' if self.original.get() else 'Perfil genérico · ensayo personalizado')
+    def build_states(self):
+        frame=self.tabs['Estados'];top=ttk.Frame(frame);top.pack(fill='x',pady=(0,5))
+        self.states_picker=ttk.Combobox(top,textvariable=self.record_choice,state='readonly',width=32);self.states_picker.pack(side='left');self.states_picker.bind('<<ComboboxSelected>>',lambda e:self.select_record())
+        ttk.Label(top,text='Estados del ensayo B · referencias punteadas · pulsa una gráfica para seleccionar tiempo').pack(side='left',padx=12)
+        bottom=ttk.Frame(frame);bottom.pack(side='bottom',fill='x')
+        self.states_play_button=ttk.Button(bottom,text='Reproducir',command=self.toggle_play);self.states_play_button.pack(side='left')
+        ttk.Label(bottom,text='Velocidad ×').pack(side='left',padx=(12,3));ttk.Combobox(bottom,textvariable=self.speed,values=['0.5','1','2','6','12'],state='readonly',width=5).pack(side='left')
+        self.states_scale=ttk.Scale(bottom,variable=self.time_value,from_=0,to=1,command=self.scrub);self.states_scale.pack(side='left',fill='x',expand=True,padx=12)
+        ttk.Label(bottom,textvariable=self.time_label,width=12).pack(side='right')
+        self.states_fig=figure();self.states_canvas=self.embed(self.states_fig,frame);self.states=StatesView(self.states_fig)
+        self.states_canvas.mpl_connect('button_press_event',self.states_click)
+    def states_click(self,event):
+        if self.record_b is not None and event.inaxes in self.states.axes.values() and event.xdata is not None:
+            if self.states_canvas.toolbar.mode:return
+            self.pause();self.seek(event.xdata)
     def restore(self):self.load_profile(self.profile)
     def apply_config(self,cfg):
         self.original.set(cfg['original']);self.scenario.set(cfg['escenario'])
@@ -207,7 +222,7 @@ class LaboratoryApp:
         for record in records:validate_record(record)
         old=(self.records,self.record_a,self.record_b)
         self.pause();self.records=tuple(records)
-        labels=[f'{i+1} · {r["config"]["escenario"]}' for i,r in enumerate(records)];self.record_picker.configure(values=labels);self.record_choice.set(labels[-1]);self.record_b=records[-1]
+        labels=[f'{i+1} · {r["config"]["escenario"]}' for i,r in enumerate(records)];self.record_picker.configure(values=labels);self.states_picker.configure(values=labels);self.record_choice.set(labels[-1]);self.record_b=records[-1]
         if len(records)==2:self.record_a=deepcopy(records[0])
         try:self.refresh_record()
         except Exception:
@@ -215,11 +230,12 @@ class LaboratoryApp:
             if self.record_b is not None:self.refresh_record()
             else:self.flight.record=None;self.flight_fig.clear();self.flight_canvas.draw_idle();self.redraw_comparison()
             raise
-        self.status.set('Ensayo calculado. Explora Vuelo y resultados o compara A/B.');self.notebook.select(self.tabs['Vuelo y resultados'])
+        self.status.set('Ensayo calculado. Estados muestra las curvas; Vuelo y resultados reproduce el avión.');self.notebook.select(self.tabs['Estados'])
     def select_record(self):
         values=list(self.record_picker.cget('values'));self.record_b=self.records[values.index(self.record_choice.get())];self.pause();self.refresh_record()
     def refresh_record(self):
-        self.flight.set_record(self.record_b);self.time_scale.configure(to=float(self.record_b['t'][-1]));self.time_value.set(0);self.seek(0);self.redraw_comparison()
+        self.flight.set_record(self.record_b);self.states.set_record(self.record_b)
+        self.time_scale.configure(to=float(self.record_b['t'][-1]));self.states_scale.configure(to=float(self.record_b['t'][-1]));self.time_value.set(0);self.seek(0);self.redraw_comparison()
     def save_a(self):
         if self.record_b is None:self.status.set('Calcula o carga primero un ensayo B.');return
         self.record_a=deepcopy(self.record_b);self.redraw_comparison();self.status.set('Referencia A guardada en memoria; sus condiciones quedan congeladas.')
@@ -238,6 +254,7 @@ class LaboratoryApp:
         if self.record_b is None:return
         self.current_index=self.flight.cursor(float(seconds));r=self.record_b;k=self.current_index;x=r['X'][k];a=np.degrees(r['angulos_rad'][k]);u=r['U_real'][k]
         self.time_value.set(float(r['t'][k]))
+        self.states.cursor(float(r['t'][k]));self.states_canvas.draw_idle()
         self.time_label.set(f'{r["t"][k]:.2f} s')
         if hasattr(self,'compare_cursor'):self.compare_cursor.set_xdata([r['t'][k],r['t'][k]]);self.compare_canvas.draw_idle()
         self.telemetry.set(f'VT {x[2]:.2f} m/s · h {-x[14]:.2f} m · α {np.degrees(x[3]):.2f}° · β {np.degrees(x[4]):.2f}° · φ/θ/ψ {a[0]:.2f}/{a[1]:.2f}/{a[2]:.2f}°\nElevador/Alerón/Timón {u[0]:.2f}/{u[1]:.2f}/{u[2]:.2f}° · throttle {u[3]:.3f} · Mach {r["Mach"][k]:.3f} · an {r["an_g"][k]:.2f} g')
@@ -245,12 +262,13 @@ class LaboratoryApp:
     def scrub(self,value):self.pause();self.seek(value)
     def pause(self):
         self.playing=False;self.play_button.configure(text='Reproducir')
+        if hasattr(self,'states_play_button'):self.states_play_button.configure(text='Reproducir')
         if self.play_id is not None:self.root.after_cancel(self.play_id);self.play_id=None
     def toggle_play(self):
         if self.record_b is None:return
         if self.playing:self.pause();return
         if self.time_value.get()>=self.record_b['t'][-1]:self.time_value.set(0)
-        self.playing=True;self.play_button.configure(text='Pausar');self.last_tick=time.monotonic();self.tick()
+        self.playing=True;self.play_button.configure(text='Pausar');self.states_play_button.configure(text='Pausar');self.last_tick=time.monotonic();self.tick()
     def tick(self):
         if not self.playing:return
         now=time.monotonic();t=min(float(self.record_b['t'][-1]),self.time_value.get()+(now-self.last_tick)*float(self.speed.get()));self.last_tick=now;self.time_value.set(t);self.seek(t)

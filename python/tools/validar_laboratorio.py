@@ -38,10 +38,10 @@ def main():
         try:save_record(app.record_b,folder)
         except FileExistsError:pass
         else:raise AssertionError('Sobrescritura permitida')
-        for name in ('Simulación','Control','Comparación','Vuelo y resultados','Ruta'):
+        for name in ('Simulación','Control','Estados','Comparación','Vuelo y resultados','Ruta'):
             app.notebook.select(app.tabs[name]);root.update()
             if args.capturar:capture(name.replace(' ','_'))
-        app.flight_fig.savefig(out/'vuelo_figura.png');app.compare_fig.savefig(out/'comparacion_figura.png')
+        app.flight_fig.savefig(out/'vuelo_figura.png');app.compare_fig.savefig(out/'comparacion_figura.png');app.states_fig.savefig(out/'estados_figura.png')
         app.load_profile('waypoints');app.run();app.cancel();assert not app.worker.busy and app.record_b is not None
         print('PASS: proceso real, originales/custom, A/B, último instante, NPZ, no sobrescritura, cancelar')
         print('QA:',out)
