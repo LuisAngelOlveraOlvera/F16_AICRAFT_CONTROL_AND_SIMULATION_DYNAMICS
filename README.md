@@ -49,3 +49,21 @@ Consulta [fuentes y datos](python/docs/DATOS_Y_FUENTES.md), [limitaciones](pytho
 Código abierto bajo [licencia MIT](LICENSE): permite utilizar, modificar y redistribuir el código, incluso comercialmente, conservando el aviso de copyright y la licencia. Se entrega sin garantías. Los materiales de terceros conservan sus derechos propios; la licencia no resuelve su titularidad. No se distribuyen PDFs o tablas originales. Las referencias bibliográficas y condiciones de los datos se documentan en cada implementación.
 
 Las pruebas automatizadas de GitHub Actions se encuentran en [Actions](https://github.com/LuisAngelOlveraOlvera/F16_AICRAFT_CONTROL_AND_SIMULATION_DYNAMICS/actions). Su resultado debe revisarse por separado de la validación local.
+
+## Laboratorio visual Python
+
+Interfaz de escritorio independiente con ocho pestañas: avión, simulación,
+condiciones iniciales, control, ruta, turbulencia, comparación y vuelo/resultados.
+Los puntos de entrada y configuraciones originales de ambos README se conservan.
+Cada perfil abre sus valores originales; los ensayos personalizados son explícitos.
+
+Desde `python/`:
+
+```powershell
+python laboratorio_f16.py
+```
+
+En Windows también se puede abrir `python/ABRIR_LABORATORIO.bat`.
+Ver [guía del laboratorio](python/GUIA_LABORATORIO.md) y
+[contrato común para MATLAB/Python](docs/CONTRATO_LABORATORIO.md).
+Implementación inicial Python; el motor visual MATLAB se desarrollará por separado.

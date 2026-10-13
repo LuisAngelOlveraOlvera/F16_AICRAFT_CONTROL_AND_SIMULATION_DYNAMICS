@@ -7,12 +7,13 @@ from .dynamics import PAR,rhs,rhs_euler,quaternion,quat_to_euler,power_command,e
 
 def alpha_reference(V,D):return 3 if V>83 and D<-100 else 8
 
-def pid_alpha(reference_deg,alpha,q,integral,step,throttle):
+def pid_alpha(reference_deg,alpha,q,integral,step,throttle,*,gains=None):
     """ctrl_PID.m: error grados, integral deg*s, anti-windup original."""
     error=reference_deg-np.degrees(alpha)
-    de=-5*error-1.5*integral+.8*np.degrees(q)
+    kp,ki,kq=(5,1.5,.8) if gains is None else gains
+    de=-kp*error-ki*integral+kq*np.degrees(q)
     if abs(de)<25:
-        integral+=error*step;de=-5*error-1.5*integral+.8*np.degrees(q)
+        integral+=error*step;de=-kp*error-ki*integral+kq*np.degrees(q)
     return np.array([np.clip(de,-25,25),0,0,throttle]),integral
 
 def linearize(x,u,model='quaternion',step=1e-6,order=2):
@@ -65,7 +66,11 @@ def trim(V=170,h=3000,gamma=0,psidot=0):
 def lqr(A,B,Q,R):
     P=solve_continuous_are(A,B,Q,R);return np.linalg.solve(R,B.T@P)
 
-def design(x,u,closed=False,act=False):
+def design(x,u,closed=False,act=False,*,weights=None):
+    def gain(A,B,Q,R,axis):
+        if weights is not None:
+            Q=Q*weights['q_'+axis];R=R*weights['r_'+axis]
+        return lqr(A,B,Q,R)
     e=quat_to_euler(x);A=jacobian(lambda z:rhs_euler(0,z,u),e);B=jacobian(lambda v:rhs_euler(0,e,v),u)
     il=[2,3,6,9,0,1];ia=[4,5,7,8];Al=A[np.ix_(il,il)];Bl=B[np.ix_(il,[0,3])]
     At=A[np.ix_(ia,ia)];Bt=B[np.ix_(ia,[1,2])];rad=np.pi/180
@@ -76,14 +81,14 @@ def design(x,u,closed=False,act=False):
         Aa=np.zeros((9,9));Ba=np.zeros((9,2));Aa[:6,:6]=Al;Ba[:6]=Bl
         Aa[6,1]=-x[2];Aa[6,3]=x[2];Aa[7,6]=1;Aa[8,0]=1
         Q=np.diag([1,1/(2*rad)**2,1/(10*rad)**2,1/(5*rad)**2,1e-6,1e-6,1/5**2,1/50**2,1/30**2])
-        c['Klon']=lqr(Aa,Ba,Q,np.diag([1/5**2,1/.3**2]))
+        c['Klon']=gain(Aa,Ba,Q,np.diag([1/5**2,1/.3**2]),'lon')
         Aa=np.zeros((6,6));Ba=np.zeros((6,2));Aa[:4,:4]=At;Ba[:4]=Bt
         Aa[4,2]=1/np.cos(e[9]);Aa[5,4]=1
         Q=np.diag([1/rad**2,1/(20*rad)**2,1/(10*rad)**2,1/(15*rad)**2,1/(5*rad)**2,1/(40*rad)**2])
-        c['Klat']=lqr(Aa,Ba,Q,np.diag([1/15**2,1/15**2]))
+        c['Klat']=gain(Aa,Ba,Q,np.diag([1/15**2,1/15**2]),'lat')
     else:
-        c['Klon']=lqr(Al,Bl,np.diag([1/2**2,1/rad**2,1/(5*rad)**2,1/(2*rad)**2,1e-6,1e-6]),np.diag([1/5**2,1/.2**2]))
-        c['Klat']=lqr(At,Bt,np.diag([1/(.5*rad)**2,1/(10*rad)**2,1/(5*rad)**2,1/(5*rad)**2]),np.diag([1/10**2,1/10**2]))
+        c['Klon']=gain(Al,Bl,np.diag([1/2**2,1/rad**2,1/(5*rad)**2,1/(2*rad)**2,1e-6,1e-6]),np.diag([1/5**2,1/.2**2]),'lon')
+        c['Klat']=gain(At,Bt,np.diag([1/(.5*rad)**2,1/(10*rad)**2,1/(5*rad)**2,1/(5*rad)**2]),np.diag([1/10**2,1/10**2]),'lat')
     return c
 
 LEWIS_LATERAL=np.array([[-.322,.064032,.038904,-.99156],[0,0,1,.039385],
