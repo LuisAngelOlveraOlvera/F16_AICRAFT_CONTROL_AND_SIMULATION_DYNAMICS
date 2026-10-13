@@ -66,4 +66,22 @@ python laboratorio_f16.py
 En Windows también se puede abrir `python/ABRIR_LABORATORIO.bat`.
 Ver [guía del laboratorio](python/GUIA_LABORATORIO.md) y
 [contrato común para MATLAB/Python](docs/CONTRATO_LABORATORIO.md).
-Implementación inicial Python; el motor visual MATLAB se desarrollará por separado.
+
+## Laboratorio visual MATLAB
+
+Motor visual nativo e independiente, con las mismas nueve pestañas y variables
+académicas. Conserva los valores de las prácticas originales MATLAB y añade
+ensayos personalizados, estados, comparación A/B y reproducción 3D.
+
+Desde `matlab/`, en MATLAB:
+
+```matlab
+lab_f16_app
+```
+
+En Windows también puede abrirse `matlab/ABRIR_LABORATORIO.bat`.
+Ver [guía MATLAB](matlab/GUIA_LABORATORIO.md),
+[evidencia de comprobación](docs/RESULTADO_LABORATORIO_MATLAB.md) y
+[contrato común](docs/CONTRATO_LABORATORIO.md).
+La guía identifica diferencias nativas de autopiloto y referencias;
+para comparar implementaciones se deben utilizar las mismas condiciones.
