@@ -20,3 +20,16 @@
 **/*.py[cod]
 .DS_Store
 Thumbs.db
+
+# Exclusiones comunes de ambos componentes
+**/fuentes_nuevas/
+**/revision_*/
+**/local/
+**/.vscode/
+**/.spyproject/
+*.gif
+*.csv
+*.npz
+*.mat
+!python/references/*.mat
+!python/references/integral/**/registro.mat

@@ -11,7 +11,8 @@ SCENARIOS=('nivelado','lateral_abierto','longitudinal_abierto','lateral_lqr','vi
 
 def simulate(*,escenario='waypoints',duracion=180,paso=.002,VT=170,altitud=3000,
              semilla=11,tramo=15,waypoints_ned=None,posicion_inicial_ned=None,
-             anticipacion_m=2000,radio_captura_m=250,targets=None,gust_series=None,noise_series=None):
+             anticipacion_m=2000,radio_captura_m=250,targets=None,gust_series=None,noise_series=None,
+             laboratory=None):
     if escenario not in SCENARIOS:raise ValueError(f'Escenario desconocido: {escenario}')
     if escenario in ('pid_alfa','longitudinal_lqr'):
         if VT!=170 or altitud!=3000 or targets is not None or gust_series is not None or waypoints_ned is not None or posicion_inicial_ned is not None:
@@ -27,10 +28,16 @@ def simulate(*,escenario='waypoints',duracion=180,paso=.002,VT=170,altitud=3000,
     nav=escenario=='waypoints';act=escenario in ('autopiloto','trayectoria','waypoints')
     closed=act or escenario in ('lateral_lqr','dryden_lqr');wind=escenario.startswith('dryden')
     gamma=5 if escenario=='ascenso' else 0;psidot=3 if escenario=='viraje' else 0
-    xt,ut,info=trim(VT,altitud,gamma,psidot);a0=angles(xt[8:12]);c=design(xt,ut,closed,act)
+    if laboratory is not None:
+        if escenario=='ascenso':gamma=laboratory['reference']['gamma_deg']
+        if escenario=='viraje':psidot=laboratory['reference']['turn_deg_s']
+    xt,ut,info=trim(VT,altitud,gamma,psidot);a0=angles(xt[8:12]);c=design(xt,ut,closed,act,weights=None if laboratory is None else laboratory['weights'])
     x=xt.copy()
     if escenario in ('lateral_abierto','lateral_lqr'):x[4]=np.radians(2);x[8:12]=quaternion(np.radians(10),a0[1],0)
     elif escenario=='longitudinal_abierto':x[3]+=np.radians(3)
+    if laboratory is not None:
+        from .laboratory.options import perturb
+        x=perturb(xt,laboratory['initial'])
     if act:x=np.r_[x,ut[:3]]
     if nav:
         if waypoints_ned is None:waypoints_ned=[[0,0,-altitud],[8000,0,-altitud-100],[16000,3000,-altitud-200],[24000,3000,-altitud-100]]
@@ -49,8 +56,10 @@ def simulate(*,escenario='waypoints',duracion=180,paso=.002,VT=170,altitud=3000,
     if targets is None:
         targets=np.tile([altitud,VT,0.],(nt,1))
         if escenario=='trayectoria':
-            targets[1:,0]=altitud+250*(2*rng.random(nt-1)-1)
-            targets[1:,2]=np.cumsum(np.radians(80)*(2*rng.random(nt-1)-1))
+            hm=250 if laboratory is None else laboratory['reference']['trayectoria_h_m']
+            pm=80 if laboratory is None else laboratory['reference']['trayectoria_rumbo_deg']
+            targets[1:,0]=altitud+hm*(2*rng.random(nt-1)-1)
+            targets[1:,2]=np.cumsum(np.radians(pm)*(2*rng.random(nt-1)-1))
     else:
         targets=np.asarray(targets,float)
         if targets.shape!=(nt,3) or not np.isfinite(targets).all():raise ValueError('Targets deben tener ceil(duracion/tramo) filas y tres columnas')
@@ -70,7 +79,10 @@ def simulate(*,escenario='waypoints',duracion=180,paso=.002,VT=170,altitud=3000,
         if nav:
             target,ng=guide(x[12:15],w,segment,VT,anticipacion_m,radio_captura_m);segment=ng['tramo'];navlog.append(ng)
         elif escenario=='trayectoria':target=targets[min(int(np.floor(now/tramo)),len(targets)-1)]
-        elif escenario=='autopiloto' and now>=5:target=np.array([altitud+100,VT,np.radians(20)])
+        elif escenario=='autopiloto':
+            rr=None if laboratory is None else laboratory['reference']
+            if now>=(5 if rr is None else rr['time_s']):
+                target=np.array([altitud+100,VT,np.radians(20)]) if rr is None else np.array([altitud+rr['delta_h_m'],VT+rr['delta_v_m_s'],np.radians(rr['delta_psi_deg'])])
         elif escenario=='viraje':target[2]=np.radians(psidot)*now
         elif escenario=='ascenso':target[0]=altitud+VT*np.sin(np.radians(gamma))*now
         if wind and gust_series is not None:gust=gust_series[k]
@@ -81,6 +93,9 @@ def simulate(*,escenario='waypoints',duracion=180,paso=.002,VT=170,altitud=3000,
             if act:lon=np.r_[lon,h-ref[0],integ[:2]];lat=np.r_[lat,wrap(a[2]-ref[2]),integ[2]]
             ul=ut[[0,3]]-c['Klon']@lon;ua=ut[[1,2]]-c['Klat']@lat
             raw=np.r_[ul[0],ua,ul[1]]
+        if laboratory is not None and laboratory['escenario']=='manual':
+            m=laboratory['manual']
+            if now>=m['time_s']:raw=np.array([m['elevador_deg'],m['aleron_deg'],m['timon_deg'],m['throttle']])
         bound=np.clip(raw,[-25,-21.5,-30,0],[25,21.5,30,1]);real=bound.copy()
         if act:real[:3]=x[15:18]
         X[k]=x;rawlog[k]=raw;boundlog[k]=bound;reallog[k]=real;G[k]=gust;refs[k]=ref;obj[k]=target
@@ -89,15 +104,23 @@ def simulate(*,escenario='waypoints',duracion=180,paso=.002,VT=170,altitud=3000,
         x=rkf_step(fun,now,paso,x,bound)
         if act:
             integ+=paso*np.array([h-ref[0],X[k,2]-ref[1],wrap(a[2]-ref[2])])
-            ref[0]+=paso*np.clip((target[0]-ref[0])/2,-10,10)
-            ref[2]+=paso*np.clip(wrap(target[2]-ref[2])/2,-np.radians(3),np.radians(3))
+            hr=10 if laboratory is None else laboratory['reference']['h_rate_m_s']
+            pr=3 if laboratory is None else laboratory['reference']['psi_rate_deg_s']
+            ref[0]+=paso*np.clip((target[0]-ref[0])/2,-hr,hr)
+            ref[2]+=paso*np.clip(wrap(target[2]-ref[2])/2,-np.radians(pr),np.radians(pr))
+            if laboratory is not None:
+                vr=laboratory['reference']['v_rate_m_s2'];ref[1]+=paso*np.clip((target[1]-ref[1])/2,-vr,vr)
         else:
             ref=target.copy()
             if escenario=='viraje':ref[2]=np.radians(psidot)*t[k+1]
             if escenario=='ascenso':ref[0]=altitud+VT*np.sin(np.radians(gamma))*t[k+1]
         if wind and gust_series is None:
-            aa=x[2]/533;w=noise_series[k] if noise_series is not None else rng.standard_normal(3)
-            gust=gust-paso*aa*gust+3*np.sqrt(2*aa*paso)*w
+            w=noise_series[k] if noise_series is not None else rng.standard_normal(3)
+            if laboratory is None:
+                aa=x[2]/533;gust=gust-paso*aa*gust+3*np.sqrt(2*aa*paso)*w
+            else:
+                turb=laboratory['turbulence'];aa=x[2]/np.array([turb['length_'+j] for j in 'uvw'])
+                sigma=np.array([turb['sigma_'+j] for j in 'uvw']);gust=gust-paso*aa*gust+sigma*np.sqrt(2*aa*paso)*w
         if not np.isfinite(x).all() or x[2]<=1:raise RuntimeError(f'Divergencia en t={t[k+1]}')
     n=k+1;config=dict(escenario=escenario,duracion=duracion,paso=paso,VT=VT,altitud=altitud,semilla=semilla,tramo=tramo,
         anticipacion_m=anticipacion_m,radio_captura_m=radio_captura_m)

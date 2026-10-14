@@ -200,7 +200,7 @@ def source_audit(path=None):
     import hashlib
     path=Path(path) if path else Path(__file__).resolve().parents[1]/'references'/'Tablas 2.xlsx'
     if not path.is_file():path=Path(__file__).resolve().parents[1]/'datos_locales'/'Tablas 2.xlsx'
-    if not path.is_file():raise FileNotFoundError('Auditoria opcional: falta datos_locales/Tablas 2.xlsx; ver docs/DATOS_Y_FUENTES.md')
+    if not path.is_file():raise FileNotFoundError('Auditoria opcional: falta datos_locales/Tablas 2.xlsx; ver ../docs/DATOS_Y_FUENTES.md')
     names=['Cmq','dCm','Cnr','dCnrlef','Cnp','dCnplef','Clp','dClplef','Cyr','dCyrlef','Cyp','dCyplef']
     at=trim(153.0096,0)[2]['alfa_deg'];items=[]
     for name in names:
