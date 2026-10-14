@@ -1,5 +1,7 @@
 # Validación del laboratorio Python — 13 octubre 2026
 
+Informe histórico de esa entrega. El 14 de octubre se consolidaron las instrucciones en el README raíz y la guía se trasladó a [LABORATORIO_PYTHON.md](LABORATORIO_PYTHON.md); los comandos y motores conservan su comportamiento. La interfaz MATLAB se implementó después de esta validación inicial: ver [informe MATLAB](RESULTADO_LABORATORIO_MATLAB.md).
+
 Base pública: `55b7587`. Implementación en rama local `codex/laboratorio-python`, checkout `LABORATORIO_PYTHON_20261013`. No se realizó push ni merge.
 
 ## Resultado

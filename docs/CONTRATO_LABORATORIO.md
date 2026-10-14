@@ -6,7 +6,7 @@ La pestaña Estados presenta nueve paneles físicos con referencias y selección
 
 ## Entrada
 
-JSON con `contrato: 1`, `perfil` y `opciones`. Perfiles: pid, lqr_longitudinal, lqr_lateral, comparacion, autopiloto, dryden_original, trayectoria_original, waypoints, generico. Valores originales definidos por experimento en `python/f16py/laboratory/profiles.py` y `matlab/+f16lab/defaults.m`, documentados en sus respectivas GUIA_LABORATORIO.
+JSON con `contrato: 1`, `perfil` y `opciones`. Perfiles: pid, lqr_longitudinal, lqr_lateral, comparacion, autopiloto, dryden_original, trayectoria_original, waypoints, generico. Valores originales definidos por experimento en `python/f16py/laboratory/profiles.py` y `matlab/+f16lab/defaults.m`, documentados en las guías [Python](LABORATORIO_PYTHON.md) y [MATLAB](LABORATORIO_MATLAB.md) del proyecto común.
 
 Se conserva una diferencia previa: autopiloto MATLAB original dura 60 s y usa prefiltros exponenciales desde t=0; Python usa 40 s y referencias del ejecutor académico desde t=5. La trayectoria original MATLAB conserva el registro `ref_hist`, además de la referencia realmente aplicada. Para comparar usar modo personalizado con las mismas entradas; cargar una configuración original de otra implementación puede ser rechazado si sus defaults nativos difieren. Compartir una semilla no iguala generadores de ruido diferentes.
 

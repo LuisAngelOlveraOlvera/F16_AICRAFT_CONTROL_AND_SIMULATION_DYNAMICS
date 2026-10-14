@@ -1,12 +1,12 @@
 # Datos y fuentes
 Se incluyen los ajustes utilizados por el simulador y referencias numéricas
 generadas mediante sus ejecuciones MATLAB. Se conserva procedencia y SHA-256
-en references/manifest_referencias.json (Python) y docs/MANIFIESTO_PAQUETE.json.
+en [python/references/manifest_referencias.json](../python/references/manifest_referencias.json) y los manifiestos históricos [MATLAB](historial/MANIFIESTO_MATLAB_20261012.json) y [Python](historial/MANIFIESTO_PYTHON_20261012.json).
 No se declara que los datos aerodinámicos completos estén certificados.
 
 No se incluyen Tablas 2.xlsx, Matriz A.xlsx ni los PDFs del repositorio de trabajo.
 La auditoría de doce hojas es opcional y requiere una copia local autorizada.
-Para habilitarla, crear datos_locales en la raíz y colocar allí Tablas 2.xlsx.
+Para habilitarla, colocar Tablas 2.xlsx en `matlab/datos_locales/` o `python/datos_locales/`, según el componente que ejecuta la auditoría.
 Esa carpeta está ignorada por Git. No subirla manualmente por la web.
 
 MATLAB: validar_fuentes_aerodinamicas
@@ -25,3 +25,5 @@ Fuentes bibliográficas:
 Las referencias generadas son una validación de implementación, no prueba
 independiente de exactitud frente al avión real. La licencia MIT del código
 no sustituye la revisión de derechos/procedencia de los ajustes derivados.
+
+Los manifiestos del 12 de octubre se preservan sin cambiar sus hashes. Sus rutas son relativas a los paquetes originales de esa fecha; no describen la organización ni los hashes vigentes después de incorporar las interfaces y consolidar la documentación. Cada ensayo del laboratorio registra sus propias fuentes actuales.

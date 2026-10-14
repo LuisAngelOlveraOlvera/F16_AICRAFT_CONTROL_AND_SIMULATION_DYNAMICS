@@ -1,12 +1,12 @@
 # Laboratorio F-16 Python
 
-Ejecutar desde esta carpeta:
+Componente Python del [proyecto F-16](../README.md). Ejecutar desde `python/`, después de instalar las dependencias indicadas en el README común:
 
 ```powershell
 python laboratorio_f16.py
 ```
 
-En Windows también se puede abrir `ABRIR_LABORATORIO.bat`. Utilizar el mismo Python y dependencias de `requirements-tested.txt`. Tkinter debe estar instalado; viene con el instalador Python habitual en Windows. En Linux puede requerir el paquete Tk de la distribución. Los comandos del README siguen siendo puntos de entrada independientes.
+En Windows también se puede abrir [python/ABRIR_LABORATORIO.bat](../python/ABRIR_LABORATORIO.bat). Utilizar el mismo Python y dependencias de `python/requirements-tested.txt`. Tkinter debe estar instalado; viene con el instalador Python habitual en Windows. En Linux puede requerir el paquete Tk de la distribución. Los comandos del README común siguen siendo puntos de entrada disponibles.
 
 ## Empezar con la configuración original
 

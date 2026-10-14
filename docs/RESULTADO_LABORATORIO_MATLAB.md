@@ -19,7 +19,7 @@ Los registros y capturas se generan localmente bajo `matlab/resultados/` y los l
 
 ## Uso y límites
 
-Desde `matlab/`: `lab_f16_app`, o el lanzador Windows `ABRIR_LABORATORIO.bat`. Ver [guía](../matlab/GUIA_LABORATORIO.md).
+Desde `matlab/`: `lab_f16_app`, o el lanzador Windows `ABRIR_LABORATORIO.bat`. Ver [guía](LABORATORIO_MATLAB.md). La conservación de archivos README descrita en este informe corresponde a la entrega del 13 de octubre; desde el 14 sus instrucciones se reúnen en el README raíz, manteniendo los comandos y el cálculo.
 
 Se preserva autopiloto MATLAB de 60 s con sus prefiltros nativos; Python original permanece en 40 s con su ejecutor académico. El modo personalizado y el contrato común permiten comparar condiciones idénticas. La prueba de cuatro casos cortos no acredita todos los vuelos largos ni igualdad de ruido usando solo una semilla. MAT/NPZ son formatos nativos distintos; JSON comparte configuración.
 

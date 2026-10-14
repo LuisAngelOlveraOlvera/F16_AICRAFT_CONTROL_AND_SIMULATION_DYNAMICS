@@ -1,12 +1,12 @@
 # Laboratorio visual F-16 MATLAB
 
-Desde esta carpeta, en MATLAB R2024a:
+Componente MATLAB del [proyecto F-16](../README.md). Desde `matlab/`, en MATLAB R2024a:
 
 ```matlab
 lab_f16_app
 ```
 
-También puede abrirse en Windows mediante `ABRIR_LABORATORIO.bat`. No requiere Python, MATLAB Engine, App Designer binario ni Parallel Computing Toolbox. La aplicación es código MATLAB base y utiliza un segundo proceso MATLAB para calcular sin bloquear la ventana. El ejecutor de procesos se verificó para Windows.
+También puede abrirse en Windows mediante [matlab/ABRIR_LABORATORIO.bat](../matlab/ABRIR_LABORATORIO.bat). No requiere Python, MATLAB Engine, App Designer binario ni Parallel Computing Toolbox. La aplicación es código MATLAB base y utiliza un segundo proceso MATLAB para calcular sin bloquear la ventana. El ejecutor de procesos se verificó para Windows.
 
 ## Uso
 
@@ -45,7 +45,7 @@ Guardar genera una nueva carpeta y rechaza sobrescritura. Cargar acepta registro
 | Trayectoria | 180 s, script nativo | 180 s, ejecutor con objetivos de referencia |
 | Waypoints | 180 s, ejecutor común | 180 s, ejecutor común |
 
-VT=170 m/s, altitud=3000 m y paso=.002 s en todas las prácticas originales. Los archivos README y sus scripts permanecen intactos. No se modifica un original para forzar igualdad; las interfaces comparten organización, variables y contrato, y los ensayos personalizados permiten igualdad de condiciones. Los scripts nativos autopiloto/trayectoria tienen diferencias de prefiltros/registro frente al ejecutor común; su procedencia queda identificada.
+VT=170 m/s, altitud=3000 m y paso=.002 s en todas las prácticas originales. El README común reúne los comandos existentes; sus scripts y defaults se conservan. Las interfaces comparten organización, variables y contrato, y los ensayos personalizados permiten igualdad de condiciones. Los scripts nativos autopiloto/trayectoria tienen diferencias de prefiltros/registro frente al ejecutor común; su procedencia queda identificada.
 
 Dryden original mantiene paso=.002 y horizonte<=30 s. Trayectoria original mantiene seis objetivos nativos antes de truncar el horizonte, evitando cambiar rumbo por consumir menos números aleatorios. En modo original conserva referencias de `ref_hist`; `referencia_aplicada` registra adicionalmente las usadas por el control. Las saturaciones distinguen comando bruto de mando aplicado.
 

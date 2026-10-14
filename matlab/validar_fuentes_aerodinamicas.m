@@ -11,7 +11,7 @@ end
 root=fileparts(mfilename('fullpath')); path=fullfile(root,'Tablas 2.xlsx');
 if ~isfile(path),path=fullfile(root,'datos_locales','Tablas 2.xlsx');end
 assert(isfile(path),'fuentes_aero:DatosLocales', ...
-    'Auditoria opcional: falta datos_locales/Tablas 2.xlsx. Ver docs/DATOS_Y_FUENTES.md.');
+    'Auditoria opcional: falta datos_locales/Tablas 2.xlsx. Ver ../docs/DATOS_Y_FUENTES.md.');
 names={'Cmq','dCm','Cnr','dCnrlef','Cnp','dCnplef','Clp','dClplef', ...
     'Cyr','dCyrlef','Cyp','dCyplef'};
 r=validar_lewis(struct('mostrar',false)); at=r.trim.alfa_deg;
